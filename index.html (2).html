@@ -1,0 +1,3565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CYBERHIRE SHIELD™ | Kelebohile Mokoena</title>
+<meta name="description" content="CYBERHIRE SHIELD™ — Executive Workforce Cyber Resilience Intelligence Platform. An independent portfolio concept by Kelebohile Mokoena.">
+<meta name="author" content="Kelebohile Mokoena">
+<meta name="owner" content="Kelebohile Mokoena">
+<meta name="product" content="CYBERHIRE SHIELD™">
+<meta name="version" content="V1.0">
+<meta name="copyright" content="© 2026 Kelebohile Mokoena. All Rights Reserved.">
+<meta name="classification" content="Portfolio · Educational · Demonstration">
+<meta property="og:title" content="CYBERHIRE SHIELD™ | Kelebohile Mokoena">
+<meta property="og:description" content="Executive Workforce Cyber Resilience Intelligence — Independent Portfolio Concept by Kelebohile Mokoena">
+<meta property="og:type" content="website">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --black: #030508;
+  --navy-deep: #050c1a;
+  --navy: #071428;
+  --navy-mid: #0a1f3d;
+  --navy-light: #0f2a52;
+  --blue-electric: #0066ff;
+  --blue-bright: #1a7fff;
+  --blue-glow: #3399ff;
+  --blue-dim: #0033aa;
+  --cyan: #00d4ff;
+  --cyan-dim: #009abf;
+  --silver: #8ca0b8;
+  --silver-light: #b8cce0;
+  --silver-bright: #d0e0f0;
+  --white: #e8f0f8;
+  --white-pure: #f0f6ff;
+  --red: #ff2244;
+  --red-dim: #cc1133;
+  --orange: #ff7700;
+  --yellow: #ffcc00;
+  --green: #00e676;
+  --green-dim: #00aa55;
+  --purple: #7c4dff;
+  --border: rgba(0,102,255,0.15);
+  --border-bright: rgba(0,102,255,0.35);
+  --glow: 0 0 40px rgba(0,102,255,0.2);
+  --glow-strong: 0 0 60px rgba(0,102,255,0.4);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  cursor: default;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--navy-deep); }
+::-webkit-scrollbar-thumb { background: var(--blue-dim); border-radius: 2px; }
+
+/* LAYOUT */
+#app { display: flex; min-height: 100vh; }
+
+/* SIDEBAR */
+#sidebar {
+  width: 260px;
+  min-width: 260px;
+  background: var(--navy-deep);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0; left: 0;
+  height: 100vh;
+  z-index: 100;
+  overflow-y: auto;
+}
+
+.sidebar-logo {
+  padding: 28px 24px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo-shield {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, var(--blue-electric), var(--cyan));
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+  box-shadow: 0 0 20px rgba(0,102,255,0.5);
+}
+
+.logo-text {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  color: var(--white-pure);
+}
+
+.logo-tm { font-size: 8px; vertical-align: super; color: var(--blue-glow); }
+
+.logo-tagline {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  color: var(--silver);
+  letter-spacing: 0.05em;
+  padding-left: 48px;
+}
+
+.sidebar-section {
+  padding: 16px 0 8px;
+}
+
+.sidebar-section-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  color: var(--silver);
+  padding: 0 24px 8px;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-left: 2px solid transparent;
+  font-size: 13px;
+  color: var(--silver);
+  font-weight: 400;
+}
+
+.nav-item:hover {
+  background: rgba(0,102,255,0.08);
+  color: var(--white);
+  border-left-color: var(--blue-dim);
+}
+
+.nav-item.active {
+  background: rgba(0,102,255,0.12);
+  color: var(--white-pure);
+  border-left-color: var(--blue-electric);
+}
+
+.nav-icon {
+  width: 18px;
+  height: 18px;
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+.nav-item.active .nav-icon { opacity: 1; }
+
+.nav-badge {
+  margin-left: auto;
+  background: var(--red);
+  color: #fff;
+  font-size: 9px;
+  padding: 1px 5px;
+  border-radius: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+}
+
+.nav-badge.warn { background: var(--orange); }
+.nav-badge.ok { background: var(--green-dim); }
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 16px 24px;
+  border-top: 1px solid var(--border);
+}
+
+.system-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  color: var(--silver);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 8px var(--green);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* MAIN CONTENT */
+#main {
+  margin-left: 260px;
+  flex: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TOPBAR */
+#topbar {
+  height: 60px;
+  background: rgba(5,12,26,0.95);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(12px);
+  gap: 24px;
+}
+
+.topbar-breadcrumb {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--silver);
+}
+
+.topbar-breadcrumb span { color: var(--blue-glow); }
+
+.topbar-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.topbar-alert {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,34,68,0.12);
+  border: 1px solid rgba(255,34,68,0.3);
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 11px;
+  color: var(--red);
+  font-family: 'JetBrains Mono', monospace;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.topbar-alert:hover { background: rgba(255,34,68,0.2); }
+
+.topbar-time {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--silver);
+}
+
+.topbar-user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.user-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue-electric), var(--purple));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* CONTENT AREA */
+#content {
+  flex: 1;
+  padding: 32px;
+  overflow-y: auto;
+}
+
+/* PAGE HEADER */
+.page-header {
+  margin-bottom: 32px;
+}
+
+.page-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--white-pure);
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+
+.page-subtitle {
+  font-size: 13px;
+  color: var(--silver);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.page-subtitle-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--blue-electric);
+}
+
+/* CARDS */
+.card {
+  background: var(--navy-deep);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  border-color: var(--border-bright);
+  box-shadow: var(--glow);
+}
+
+.card-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--silver);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-title::before {
+  content: '';
+  display: block;
+  width: 3px;
+  height: 12px;
+  background: var(--blue-electric);
+  border-radius: 2px;
+}
+
+/* GRIDS */
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.grid-main { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+
+/* METRIC CARDS */
+.metric-card {
+  background: var(--navy-deep);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.metric-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--blue-electric);
+}
+
+.metric-card.critical::before { background: var(--red); }
+.metric-card.warn::before { background: var(--orange); }
+.metric-card.safe::before { background: var(--green); }
+.metric-card.purple::before { background: var(--purple); }
+
+.metric-card:hover {
+  border-color: var(--border-bright);
+  box-shadow: var(--glow);
+  transform: translateY(-2px);
+}
+
+.metric-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--silver);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.metric-value {
+  font-family: 'Syne', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--white-pure);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.metric-value.red { color: var(--red); }
+.metric-value.orange { color: var(--orange); }
+.metric-value.green { color: var(--green); }
+.metric-value.blue { color: var(--blue-glow); }
+.metric-value.cyan { color: var(--cyan); }
+
+.metric-sub {
+  font-size: 11px;
+  color: var(--silver);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.metric-change {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.metric-change.up { background: rgba(255,34,68,0.15); color: var(--red); }
+.metric-change.down { background: rgba(0,230,118,0.12); color: var(--green); }
+
+/* SCORE RING */
+.score-ring-container {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.score-ring {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.score-ring svg {
+  transform: rotate(-90deg);
+  width: 120px;
+  height: 120px;
+}
+
+.score-ring-value {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-ring-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--white-pure);
+  line-height: 1;
+}
+
+.score-ring-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  color: var(--silver);
+  text-align: center;
+}
+
+/* RISK BADGE */
+.risk-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.risk-badge.critical { background: rgba(255,34,68,0.15); color: var(--red); border: 1px solid rgba(255,34,68,0.3); }
+.risk-badge.high { background: rgba(255,119,0,0.15); color: var(--orange); border: 1px solid rgba(255,119,0,0.3); }
+.risk-badge.moderate { background: rgba(255,204,0,0.12); color: var(--yellow); border: 1px solid rgba(255,204,0,0.3); }
+.risk-badge.low { background: rgba(0,230,118,0.1); color: var(--green); border: 1px solid rgba(0,230,118,0.25); }
+
+/* PROGRESS BARS */
+.progress-bar {
+  height: 4px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.8s ease;
+}
+
+.progress-fill.blue { background: linear-gradient(90deg, var(--blue-dim), var(--blue-electric)); }
+.progress-fill.red { background: linear-gradient(90deg, var(--red-dim), var(--red)); }
+.progress-fill.orange { background: linear-gradient(90deg, #aa5500, var(--orange)); }
+.progress-fill.green { background: linear-gradient(90deg, var(--green-dim), var(--green)); }
+.progress-fill.cyan { background: linear-gradient(90deg, var(--cyan-dim), var(--cyan)); }
+.progress-fill.yellow { background: linear-gradient(90deg, #aa8800, var(--yellow)); }
+
+/* HEATMAP */
+.heatmap {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.heatmap-cell {
+  aspect-ratio: 1;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.heatmap-cell:hover { transform: scale(1.3); z-index: 10; }
+.heatmap-cell:hover::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--navy-mid);
+  border: 1px solid var(--border);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  white-space: nowrap;
+  z-index: 100;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--white);
+}
+
+/* TABLE */
+.data-table { width: 100%; border-collapse: collapse; }
+.data-table th {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: var(--silver);
+  text-transform: uppercase;
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.data-table td {
+  padding: 12px 12px;
+  border-bottom: 1px solid rgba(0,102,255,0.06);
+  font-size: 13px;
+  color: var(--silver-light);
+}
+
+.data-table tr:hover td { background: rgba(0,102,255,0.04); }
+
+/* MINI CHART (sparkline) */
+.sparkline {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 40px;
+}
+
+.spark-bar {
+  flex: 1;
+  border-radius: 2px 2px 0 0;
+  min-height: 4px;
+  transition: height 0.5s ease;
+}
+
+/* SIMULATION SLIDER */
+.sim-control {
+  margin-bottom: 20px;
+}
+
+.sim-label {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--silver);
+  margin-bottom: 8px;
+}
+
+.sim-label span { color: var(--blue-glow); font-weight: 600; }
+
+.sim-slider {
+  width: 100%;
+  height: 4px;
+  -webkit-appearance: none;
+  background: rgba(255,255,255,0.08);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.sim-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--blue-electric);
+  cursor: pointer;
+  box-shadow: 0 0 12px var(--blue-electric);
+  transition: all 0.2s;
+}
+
+.sim-slider::-webkit-slider-thumb:hover { transform: scale(1.2); }
+
+/* AI CHAT */
+.ai-chat {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.chat-msg {
+  display: flex;
+  gap: 10px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.chat-msg.user { flex-direction: row-reverse; }
+
+.chat-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.chat-avatar.ai {
+  background: linear-gradient(135deg, var(--blue-electric), var(--cyan));
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  color: #fff;
+}
+
+.chat-avatar.user-av {
+  background: linear-gradient(135deg, var(--purple), var(--blue-electric));
+  border-radius: 50%;
+  color: #fff;
+}
+
+.chat-bubble {
+  max-width: 75%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.chat-msg.ai .chat-bubble {
+  background: var(--navy-mid);
+  border: 1px solid var(--border);
+  color: var(--silver-light);
+}
+
+.chat-msg.user .chat-bubble {
+  background: var(--blue-dim);
+  color: var(--white-pure);
+  text-align: right;
+}
+
+.chat-input-row {
+  display: flex;
+  gap: 8px;
+  padding: 12px 16px;
+  border-top: 1px solid var(--border);
+}
+
+.chat-input {
+  flex: 1;
+  background: var(--navy-mid);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 14px;
+  color: var(--white);
+  font-size: 13px;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.chat-input:focus { border-color: var(--blue-electric); }
+
+.chat-send {
+  background: var(--blue-electric);
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Syne', sans-serif;
+  transition: all 0.2s;
+}
+
+.chat-send:hover { background: var(--blue-bright); box-shadow: 0 0 20px rgba(0,102,255,0.4); }
+
+.quick-questions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 8px 16px 4px;
+}
+
+.quick-q {
+  font-size: 11px;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  color: var(--silver);
+  cursor: pointer;
+  font-family: 'JetBrains Mono', monospace;
+  transition: all 0.2s;
+  background: transparent;
+}
+
+.quick-q:hover {
+  border-color: var(--blue-electric);
+  color: var(--blue-glow);
+  background: rgba(0,102,255,0.08);
+}
+
+/* RADAR CHART */
+.radar-container { position: relative; display: flex; justify-content: center; }
+
+/* MINI INDICATORS */
+.indicator-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0,102,255,0.08);
+}
+
+.indicator-row:last-child { border-bottom: none; }
+
+.indicator-label {
+  font-size: 13px;
+  color: var(--silver-light);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.indicator-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.indicator-value {
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--white-pure);
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Syne', sans-serif;
+  letter-spacing: 0.05em;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--blue-electric);
+  color: #fff;
+}
+
+.btn-primary:hover { background: var(--blue-bright); box-shadow: 0 0 20px rgba(0,102,255,0.4); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--blue-glow);
+  border: 1px solid var(--border-bright);
+}
+
+.btn-outline:hover { background: rgba(0,102,255,0.1); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--silver);
+  border: 1px solid var(--border);
+}
+
+.btn-ghost:hover { color: var(--white); border-color: var(--silver); }
+
+/* TABS */
+.tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+
+.tab {
+  padding: 10px 18px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--silver);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  font-family: 'Syne', sans-serif;
+  letter-spacing: 0.05em;
+  transition: all 0.2s;
+}
+
+.tab:hover { color: var(--white); }
+.tab.active { color: var(--blue-electric); border-bottom-color: var(--blue-electric); }
+
+/* TAG */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+}
+
+.tag.blue { background: rgba(0,102,255,0.15); color: var(--blue-glow); }
+.tag.red { background: rgba(255,34,68,0.12); color: var(--red); }
+.tag.green { background: rgba(0,230,118,0.1); color: var(--green); }
+.tag.orange { background: rgba(255,119,0,0.12); color: var(--orange); }
+.tag.purple { background: rgba(124,77,255,0.15); color: var(--purple); }
+.tag.yellow { background: rgba(255,204,0,0.12); color: var(--yellow); }
+
+/* SECTION */
+.section { margin-bottom: 24px; }
+
+/* DIVIDER */
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 24px 0;
+}
+
+/* HIDDEN PAGES */
+.page { display: none; }
+.page.active { display: block; }
+
+/* LOADING/TYPING ANIMATION */
+.typing-dots {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  padding: 4px 0;
+}
+
+.typing-dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--blue-glow);
+  animation: typing 1.2s infinite;
+}
+
+.typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+.typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typing {
+  0%, 60%, 100% { opacity: 0.3; transform: translateY(0); }
+  30% { opacity: 1; transform: translateY(-4px); }
+}
+
+/* ANIMATE IN */
+.animate-in {
+  animation: slideUp 0.4s ease forwards;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* TWIN SIMULATOR */
+.twin-output {
+  background: var(--navy-mid);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.twin-scenario {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.twin-scenario:last-child { border-bottom: none; }
+
+.twin-impact {
+  margin-left: auto;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+}
+
+/* REPORT SECTION */
+.report-card {
+  background: var(--navy-mid);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.report-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at top right, rgba(0,102,255,0.08), transparent 70%);
+}
+
+/* ALERT TICKER */
+.alert-ticker {
+  background: rgba(255,34,68,0.08);
+  border: 1px solid rgba(255,34,68,0.2);
+  border-radius: 4px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  font-size: 12px;
+}
+
+.ticker-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--red);
+  letter-spacing: 0.12em;
+  flex-shrink: 0;
+  background: rgba(255,34,68,0.15);
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+.ticker-scroll {
+  flex: 1;
+  overflow: hidden;
+  color: var(--silver-light);
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+  #sidebar { width: 60px; min-width: 60px; }
+  #sidebar .logo-text, #sidebar .logo-tagline, #sidebar .sidebar-section-label, #sidebar .nav-item span, #sidebar .nav-badge, #sidebar .system-status { display: none; }
+  #sidebar .nav-item { padding: 12px; justify-content: center; }
+  #main { margin-left: 60px; }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .grid-main { grid-template-columns: 1fr; }
+  #content { padding: 16px; }
+}
+
+/* MISC UTILS */
+.flex { display: flex; }
+.flex-between { display: flex; justify-content: space-between; align-items: center; }
+.flex-gap { display: flex; gap: 12px; align-items: center; }
+.mt-4 { margin-top: 4px; }
+.mt-8 { margin-top: 8px; }
+.mt-16 { margin-top: 16px; }
+.mb-8 { margin-bottom: 8px; }
+.mb-16 { margin-bottom: 16px; }
+.text-small { font-size: 11px; color: var(--silver); }
+.text-mono { font-family: 'JetBrains Mono', monospace; }
+.text-blue { color: var(--blue-glow); }
+.text-red { color: var(--red); }
+.text-green { color: var(--green); }
+.text-orange { color: var(--orange); }
+.text-cyan { color: var(--cyan); }
+.text-white { color: var(--white-pure); }
+
+/* ROLE CARD */
+.role-card {
+  background: var(--navy-mid);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+
+.role-card:hover {
+  border-color: var(--border-bright);
+  box-shadow: var(--glow);
+  transform: translateY(-2px);
+}
+
+.role-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white-pure);
+  margin-bottom: 10px;
+}
+
+/* CAPABILITY BAR */
+.cap-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.cap-label {
+  width: 140px;
+  font-size: 11px;
+  color: var(--silver);
+  flex-shrink: 0;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.cap-bar {
+  flex: 1;
+  height: 6px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.cap-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 1s ease;
+}
+
+.cap-pct {
+  width: 36px;
+  text-align: right;
+  font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+}
+
+/* CERT TRACKER */
+.cert-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.02);
+  margin-bottom: 6px;
+  transition: background 0.2s;
+}
+
+.cert-item:hover { background: rgba(255,255,255,0.04); }
+
+.cert-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.cert-name { font-size: 13px; color: var(--silver-light); font-weight: 500; }
+.cert-count {
+  margin-left: auto;
+  font-family: 'Syne', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white-pure);
+}
+
+/* Glow text */
+.glow-text {
+  color: var(--blue-electric);
+  text-shadow: 0 0 20px rgba(0,102,255,0.6);
+}
+
+/* Mini status */
+.mini-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.mini-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+/* EXECUTIVE SUMMARY HIGHLIGHT */
+.exec-highlight {
+  border-left: 3px solid var(--blue-electric);
+  padding: 12px 16px;
+  background: rgba(0,102,255,0.06);
+  border-radius: 0 6px 6px 0;
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: var(--silver-light);
+  line-height: 1.7;
+}
+
+.exec-highlight.red { border-left-color: var(--red); background: rgba(255,34,68,0.06); }
+.exec-highlight.orange { border-left-color: var(--orange); background: rgba(255,119,0,0.06); }
+.exec-highlight.green { border-left-color: var(--green); background: rgba(0,230,118,0.06); }
+
+/* CANDIDATE TABLE */
+.candidate-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.candidate-row:hover {
+  background: rgba(0,102,255,0.06);
+  border-color: var(--border);
+}
+
+.cand-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+/* NUMBER TICKER */
+@keyframes countUp {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* SPLASH SCREEN */
+#splash {
+  position: fixed;
+  inset: 0;
+  background: var(--black);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+#splash.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+
+.splash-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 40%, rgba(0,102,255,0.1) 0%, transparent 70%),
+    radial-gradient(ellipse 30% 30% at 20% 80%, rgba(0,212,255,0.05) 0%, transparent 60%),
+    radial-gradient(ellipse 25% 25% at 80% 20%, rgba(124,77,255,0.04) 0%, transparent 60%);
+}
+
+.splash-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,102,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,102,255,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+}
+
+.splash-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.splash-shield {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--blue-electric), var(--cyan));
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #fff;
+  box-shadow: 0 0 60px rgba(0,102,255,0.5), 0 0 120px rgba(0,102,255,0.2);
+  margin-bottom: 32px;
+  animation: shieldPulse 3s ease infinite;
+}
+
+@keyframes shieldPulse {
+  0%, 100% { box-shadow: 0 0 60px rgba(0,102,255,0.5), 0 0 120px rgba(0,102,255,0.2); }
+  50% { box-shadow: 0 0 80px rgba(0,102,255,0.7), 0 0 160px rgba(0,102,255,0.3); }
+}
+
+.splash-product {
+  font-family: 'Syne', sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--white-pure);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.splash-tm { font-size: 18px; color: var(--blue-glow); vertical-align: super; }
+
+.splash-tagline {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--silver);
+  text-transform: uppercase;
+  margin-bottom: 48px;
+}
+
+.splash-divider {
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, transparent, var(--blue-electric), transparent);
+  margin-bottom: 48px;
+}
+
+.splash-creator-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--silver);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  opacity: 0.7;
+}
+
+.splash-creator-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--white-pure);
+  letter-spacing: 0.02em;
+  margin-bottom: 6px;
+}
+
+.splash-creator-role {
+  font-size: 12px;
+  color: var(--silver);
+  letter-spacing: 0.05em;
+  margin-bottom: 48px;
+}
+
+.splash-enter-btn {
+  background: transparent;
+  border: 1px solid var(--border-bright);
+  color: var(--blue-glow);
+  font-family: 'Syne', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  padding: 14px 48px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.splash-enter-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,102,255,0.1), rgba(0,212,255,0.05));
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.splash-enter-btn:hover {
+  border-color: var(--blue-electric);
+  color: var(--white-pure);
+  box-shadow: 0 0 30px rgba(0,102,255,0.3);
+}
+
+.splash-enter-btn:hover::before { opacity: 1; }
+
+.splash-copyright {
+  position: absolute;
+  bottom: 32px;
+  left: 0; right: 0;
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: rgba(139,160,184,0.4);
+  letter-spacing: 0.1em;
+}
+
+.splash-portfolio-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(0,102,255,0.2);
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  color: var(--silver);
+  letter-spacing: 0.12em;
+  margin-bottom: 32px;
+}
+
+.splash-portfolio-badge-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--blue-electric);
+  box-shadow: 0 0 8px var(--blue-electric);
+}
+
+/* ABOUT / LICENSE / SETTINGS PAGES */
+.info-page-hero {
+  background: linear-gradient(135deg, rgba(0,102,255,0.06) 0%, rgba(0,212,255,0.03) 100%);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 48px;
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.info-page-hero::before {
+  content: '';
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(0,102,255,0.1) 0%, transparent 70%);
+}
+
+.info-page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -20px; left: 20%;
+  width: 300px;
+  height: 100px;
+  background: radial-gradient(ellipse, rgba(0,212,255,0.04) 0%, transparent 70%);
+}
+
+.creator-monogram {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue-electric), var(--cyan));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Syne', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: #fff;
+  box-shadow: 0 0 40px rgba(0,102,255,0.4);
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.creator-name-large {
+  font-family: 'Syne', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--white-pure);
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+}
+
+.creator-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--blue-glow);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.creator-domains {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.creator-domain-tag {
+  border: 1px solid var(--border-bright);
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 11px;
+  color: var(--silver-light);
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.05em;
+  background: rgba(0,102,255,0.05);
+}
+
+.creator-statement {
+  font-size: 15px;
+  color: var(--silver-light);
+  line-height: 1.9;
+  max-width: 680px;
+  border-left: 3px solid var(--blue-electric);
+  padding-left: 20px;
+  font-style: italic;
+}
+
+/* LICENSE CARD */
+.license-block {
+  background: var(--navy-mid);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 32px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.license-block::before {
+  content: '©';
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  font-family: 'Syne', sans-serif;
+  font-size: 64px;
+  font-weight: 800;
+  color: rgba(0,102,255,0.06);
+  line-height: 1;
+}
+
+.license-year {
+  font-family: 'Syne', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: rgba(0,102,255,0.15);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.license-owner {
+  font-family: 'Syne', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--white-pure);
+  margin-bottom: 4px;
+}
+
+.license-rights {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--blue-glow);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.license-term {
+  display: flex;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(0,102,255,0.08);
+  font-size: 13px;
+  color: var(--silver-light);
+  line-height: 1.6;
+}
+
+.license-term:last-child { border-bottom: none; }
+
+.license-term-icon {
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* SETTINGS PAGE */
+.settings-group {
+  background: var(--navy-deep);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.settings-group-header {
+  padding: 16px 24px;
+  background: rgba(0,102,255,0.04);
+  border-bottom: 1px solid var(--border);
+  font-family: 'Syne', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--silver-bright);
+  text-transform: uppercase;
+}
+
+.settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid rgba(0,102,255,0.05);
+}
+
+.settings-row:last-child { border-bottom: none; }
+
+.settings-label {
+  font-size: 13px;
+  color: var(--silver-light);
+}
+
+.settings-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--blue-glow);
+}
+
+.settings-value.muted { color: var(--silver); }
+
+/* SIGNATURE */
+.platform-signature {
+  text-align: center;
+  padding: 24px 0 12px;
+  border-top: 1px solid var(--border);
+  margin-top: 8px;
+}
+
+.platform-signature-line {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  color: rgba(139,160,184,0.35);
+  text-transform: uppercase;
+}
+
+.platform-signature-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(139,160,184,0.4);
+  letter-spacing: 0.05em;
+  margin-top: 3px;
+}
+
+/* TOPBAR SIGNATURE */
+.topbar-signature {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: rgba(139,160,184,0.3);
+  text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SPLASH / LANDING SCREEN                    -->
+<!-- ════════════════════════════════════════════ -->
+<div id="splash">
+  <div class="splash-bg"></div>
+  <div class="splash-grid"></div>
+  <div class="splash-content">
+    <div class="splash-shield">⬡</div>
+    <div class="splash-product">CYBERHIRE SHIELD<span class="splash-tm">™</span></div>
+    <div class="splash-tagline">Predict Workforce Exposure Before It Becomes Cyber Risk</div>
+    <div class="splash-portfolio-badge">
+      <div class="splash-portfolio-badge-dot"></div>
+      Independent Portfolio Concept
+    </div>
+    <div class="splash-divider"></div>
+    <div class="splash-creator-label">Designed &amp; Directed by</div>
+    <div class="splash-creator-name">Kelebohile Mokoena</div>
+    <div class="splash-creator-role">HR Innovation · Talent Acquisition · Workforce Intelligence · AI &amp; Future of Work</div>
+    <button class="splash-enter-btn" onclick="enterPlatform()">Enter Platform</button>
+  </div>
+  <div class="splash-copyright">© 2026 Kelebohile Mokoena &nbsp;·&nbsp; All Rights Reserved &nbsp;·&nbsp; CYBERHIRE SHIELD™ V1.0 &nbsp;·&nbsp; Independent Portfolio Concept</div>
+</div>
+
+<div id="app">
+
+<!-- SIDEBAR -->
+<nav id="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-shield">
+      <div class="logo-icon">⬡</div>
+      <div class="logo-text">CYBERHIRE SHIELD<span class="logo-tm">™</span></div>
+    </div>
+    <div class="logo-tagline">WORKFORCE CYBER RESILIENCE</div>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-label">Executive</div>
+    <div class="nav-item active" data-page="command" onclick="navigate('command',this)">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+      <span>Command Center</span>
+      <span class="nav-badge">LIVE</span>
+    </div>
+    <div class="nav-item" data-page="summary" onclick="navigate('summary',this)">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+      <span>Executive Summary</span>
+    </div>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-label">Intelligence</div>
+    <div class="nav-item" data-page="radar" onclick="navigate('radar',this)">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/><path d="M12 3v9l5 5"/></svg>
+      <span>Cyber Talent Radar</span>
+      <span class="nav-badge warn">3</span>
+    </div>
+    <div class="nav-item" data-page="risk" onclick="navigate('risk',this)">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg>
+      <span>Workforce Risk Engine</span>
+      <span class="nav-badge">!</span>
+    </div>
+    <div class="nav-item" data-page="capability" onclick="navigate('capability',this)">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+      <span>Capability Intelligence</span>
+    </div>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-label">Simulation</div>
+    <div class="nav-item" data-page="twin" onclick="navigate('twin',this)">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      <span>Workforce Digital Twin</span>
+    </div>
+    <div class="nav-item" data-page="simulator" onclick="navigate('simulator',this)">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20V10m6 0l-6-6-6 6"/><circle cx="12" cy="20" r="1"/></svg>
+      <span>Risk Simulator</span>
+    </div>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-label">Operations</div>
+    <div class="nav-item" data-page="hiring" onclick="navigate('hiring',this)">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+      <span>Cyber Hiring Intelligence</span>
+      <span class="nav-badge ok">14</span>
+    </div>
+    <div class="nav-item" data-page="copilot" onclick="navigate('copilot',this)">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+      <span>AI Executive Copilot</span>
+    </div>
+    <div class="nav-item" data-page="reports" onclick="navigate('reports',this)">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      <span>Executive Reporting</span>
+    </div>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-label">Platform</div>
+    <div class="nav-item" data-page="about" onclick="navigate('about',this)">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span>About the Creator</span>
+    </div>
+    <div class="nav-item" data-page="license" onclick="navigate('license',this)">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span>License &amp; Ownership</span>
+    </div>
+    <div class="nav-item" data-page="settings" onclick="navigate('settings',this)">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+      <span>Settings</span>
+    </div>
+  </div>
+
+  <div class="sidebar-footer">
+    <div class="platform-signature">
+      <div class="platform-signature-line">Designed &amp; Directed by</div>
+      <div class="platform-signature-name">Kelebohile Mokoena</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:8px;color:rgba(139,160,184,0.25);letter-spacing:0.1em;margin-top:6px">© 2026 · PORTFOLIO CONCEPT</div>
+    </div>
+    <div class="system-status" style="margin-top:8px">
+      <div class="status-dot"></div>
+      LIVE — All Systems Nominal
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<div id="main">
+
+  <!-- TOPBAR -->
+  <div id="topbar">
+    <div class="topbar-breadcrumb">
+      CYBERHIRE SHIELD<span class="logo-tm">™</span> &nbsp;/&nbsp; <span id="topbar-section">Command Center</span>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-signature">K. Mokoena · 2026</div>
+      <div class="topbar-alert">
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--red);display:inline-block;"></span>
+        3 Critical Exposures
+      </div>
+      <div class="topbar-time" id="clock"></div>
+      <div class="topbar-user">
+        <div class="user-avatar">EX</div>
+        <div style="font-size:12px;color:var(--silver);">CISO View</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div id="content">
+
+    <!-- ════════ PAGE: COMMAND CENTER ════════ -->
+    <div class="page active" id="page-command">
+      <div class="page-header">
+        <div class="page-title">Executive Cyber Command Center</div>
+        <div class="page-subtitle">
+          <span>Q2 2025 · Real-Time Intelligence</span>
+          <div class="page-subtitle-dot"></div>
+          <span>Last updated: <span class="text-mono text-blue" id="last-updated"></span></span>
+          <div class="page-subtitle-dot"></div>
+          <span class="risk-badge critical">⬡ EXPOSURE: HIGH</span>
+        </div>
+      </div>
+
+      <div class="alert-ticker">
+        <span class="ticker-label">⚡ ALERT</span>
+        <div class="ticker-scroll">
+          SOC Analyst vacancy rate at 34% — Cloud Security certifications expiring in 47 days — Security Architect succession depth at 0.8x — Threat Intelligence team burnout risk elevated — Hiring freeze impact: +22% exposure score
+        </div>
+      </div>
+
+      <!-- TOP METRICS -->
+      <div class="grid-4 mb-16 section">
+        <div class="metric-card critical animate-in" style="animation-delay:0.05s">
+          <div class="metric-label">Cyber Workforce Exposure Score™</div>
+          <div class="metric-value red">7.4<span style="font-size:18px;color:var(--silver)">/10</span></div>
+          <div class="metric-sub">
+            <span class="metric-change up">▲ +1.2 vs Q1</span>
+            <span style="color:var(--silver);">Trend: Deteriorating</span>
+          </div>
+          <div class="progress-bar mt-4"><div class="progress-fill red" style="width:74%"></div></div>
+        </div>
+
+        <div class="metric-card warn animate-in" style="animation-delay:0.1s">
+          <div class="metric-label">Workforce Resilience Index™</div>
+          <div class="metric-value orange">58<span style="font-size:18px;color:var(--silver)">%</span></div>
+          <div class="metric-sub">
+            <span class="metric-change up">▼ -8pts vs Q1</span>
+            <span style="color:var(--silver);">Target: 80%</span>
+          </div>
+          <div class="progress-bar mt-4"><div class="progress-fill orange" style="width:58%"></div></div>
+        </div>
+
+        <div class="metric-card animate-in" style="animation-delay:0.15s">
+          <div class="metric-label">Hiring Readiness</div>
+          <div class="metric-value blue">43<span style="font-size:18px;color:var(--silver)">%</span></div>
+          <div class="metric-sub">
+            <span class="metric-change up">▲ 12 roles open</span>
+            <span style="color:var(--silver);">Avg TTF: 67 days</span>
+          </div>
+          <div class="progress-bar mt-4"><div class="progress-fill blue" style="width:43%"></div></div>
+        </div>
+
+        <div class="metric-card safe animate-in" style="animation-delay:0.2s">
+          <div class="metric-label">Capability Coverage</div>
+          <div class="metric-value green">71<span style="font-size:18px;color:var(--silver)">%</span></div>
+          <div class="metric-sub">
+            <span class="metric-change down">▼ -3% in Cloud Sec</span>
+            <span style="color:var(--silver);">9 gaps identified</span>
+          </div>
+          <div class="progress-bar mt-4"><div class="progress-fill green" style="width:71%"></div></div>
+        </div>
+      </div>
+
+      <!-- SECOND ROW -->
+      <div class="grid-4 mb-16 section">
+        <div class="metric-card animate-in" style="animation-delay:0.25s">
+          <div class="metric-label">Burnout Risk Index</div>
+          <div class="metric-value orange">HIGH</div>
+          <div class="metric-sub">SOC Team · Tier 1</div>
+          <div class="sparkline mt-8">
+            <div class="spark-bar" style="height:30%;background:var(--orange);opacity:0.3"></div>
+            <div class="spark-bar" style="height:45%;background:var(--orange);opacity:0.4"></div>
+            <div class="spark-bar" style="height:40%;background:var(--orange);opacity:0.5"></div>
+            <div class="spark-bar" style="height:55%;background:var(--orange);opacity:0.6"></div>
+            <div class="spark-bar" style="height:70%;background:var(--orange);opacity:0.8"></div>
+            <div class="spark-bar" style="height:80%;background:var(--orange);opacity:0.9"></div>
+            <div class="spark-bar" style="height:90%;background:var(--orange)"></div>
+          </div>
+        </div>
+
+        <div class="metric-card critical animate-in" style="animation-delay:0.3s">
+          <div class="metric-label">Vacancy Risk</div>
+          <div class="metric-value red">34<span style="font-size:18px;color:var(--silver)">%</span></div>
+          <div class="metric-sub">
+            <span class="metric-change up">Critical Roles Vacant</span>
+          </div>
+          <div class="sparkline mt-8">
+            <div class="spark-bar" style="height:20%;background:var(--red);opacity:0.3"></div>
+            <div class="spark-bar" style="height:25%;background:var(--red);opacity:0.4"></div>
+            <div class="spark-bar" style="height:35%;background:var(--red);opacity:0.5"></div>
+            <div class="spark-bar" style="height:30%;background:var(--red);opacity:0.6"></div>
+            <div class="spark-bar" style="height:45%;background:var(--red);opacity:0.7"></div>
+            <div class="spark-bar" style="height:55%;background:var(--red);opacity:0.9"></div>
+            <div class="spark-bar" style="height:70%;background:var(--red)"></div>
+          </div>
+        </div>
+
+        <div class="metric-card purple animate-in" style="animation-delay:0.35s">
+          <div class="metric-label">Succession Depth</div>
+          <div class="metric-value" style="color:var(--purple)">0.8x</div>
+          <div class="metric-sub">Avg across critical roles</div>
+          <div class="sparkline mt-8">
+            <div class="spark-bar" style="height:60%;background:var(--purple);opacity:0.5"></div>
+            <div class="spark-bar" style="height:70%;background:var(--purple);opacity:0.55"></div>
+            <div class="spark-bar" style="height:65%;background:var(--purple);opacity:0.6"></div>
+            <div class="spark-bar" style="height:55%;background:var(--purple);opacity:0.65"></div>
+            <div class="spark-bar" style="height:50%;background:var(--purple);opacity:0.7"></div>
+            <div class="spark-bar" style="height:45%;background:var(--purple);opacity:0.8"></div>
+            <div class="spark-bar" style="height:40%;background:var(--purple)"></div>
+          </div>
+        </div>
+
+        <div class="metric-card animate-in" style="animation-delay:0.4s">
+          <div class="metric-label">Cert Expiry (90-day)</div>
+          <div class="metric-value cyan">18</div>
+          <div class="metric-sub">Certifications at risk</div>
+          <div class="sparkline mt-8">
+            <div class="spark-bar" style="height:20%;background:var(--cyan);opacity:0.3"></div>
+            <div class="spark-bar" style="height:30%;background:var(--cyan);opacity:0.4"></div>
+            <div class="spark-bar" style="height:35%;background:var(--cyan);opacity:0.5"></div>
+            <div class="spark-bar" style="height:40%;background:var(--cyan);opacity:0.6"></div>
+            <div class="spark-bar" style="height:55%;background:var(--cyan);opacity:0.7"></div>
+            <div class="spark-bar" style="height:65%;background:var(--cyan);opacity:0.9"></div>
+            <div class="spark-bar" style="height:80%;background:var(--cyan)"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAIN GRID: Heatmap + Exposure Breakdown -->
+      <div class="grid-main section">
+        <div class="card animate-in" style="animation-delay:0.45s">
+          <div class="card-title">Team Exposure Heatmap — Live Risk Map</div>
+          <div style="margin-bottom:16px;font-size:12px;color:var(--silver);">Hover cells for detail. Each cell = one role cluster across the cyber organisation.</div>
+          <div class="heatmap" id="heatmap"></div>
+          <div style="display:flex;gap:16px;margin-top:16px;font-size:10px;font-family:'JetBrains Mono',monospace;color:var(--silver);">
+            <div style="display:flex;align-items:center;gap:6px;"><div style="width:10px;height:10px;border-radius:2px;background:rgba(0,230,118,0.7)"></div>LOW</div>
+            <div style="display:flex;align-items:center;gap:6px;"><div style="width:10px;height:10px;border-radius:2px;background:rgba(255,204,0,0.7)"></div>MODERATE</div>
+            <div style="display:flex;align-items:center;gap:6px;"><div style="width:10px;height:10px;border-radius:2px;background:rgba(255,119,0,0.7)"></div>HIGH</div>
+            <div style="display:flex;align-items:center;gap:6px;"><div style="width:10px;height:10px;border-radius:2px;background:rgba(255,34,68,0.85)"></div>CRITICAL</div>
+          </div>
+        </div>
+
+        <div class="card animate-in" style="animation-delay:0.5s">
+          <div class="card-title">Exposure Score Breakdown</div>
+          <div>
+            <div class="indicator-row">
+              <div class="indicator-label"><div class="indicator-dot" style="background:var(--red)"></div>Vacancy Impact</div>
+              <div class="indicator-value text-red">+2.8</div>
+            </div>
+            <div class="indicator-row">
+              <div class="indicator-label"><div class="indicator-dot" style="background:var(--orange)"></div>Capability Gaps</div>
+              <div class="indicator-value text-orange">+1.9</div>
+            </div>
+            <div class="indicator-row">
+              <div class="indicator-label"><div class="indicator-dot" style="background:var(--yellow)"></div>Attrition Risk</div>
+              <div class="indicator-value" style="color:var(--yellow)">+1.4</div>
+            </div>
+            <div class="indicator-row">
+              <div class="indicator-label"><div class="indicator-dot" style="background:var(--cyan)"></div>Training Deficit</div>
+              <div class="indicator-value text-cyan">+0.7</div>
+            </div>
+            <div class="indicator-row">
+              <div class="indicator-label"><div class="indicator-dot" style="background:var(--purple)"></div>Succession Risk</div>
+              <div class="indicator-value" style="color:var(--purple)">+0.6</div>
+            </div>
+            <div class="indicator-row">
+              <div class="indicator-label"><div class="indicator-dot" style="background:var(--green)"></div>Mitigation Actions</div>
+              <div class="indicator-value text-green">-2.0</div>
+            </div>
+          </div>
+          <div class="divider" style="margin:16px 0"></div>
+          <div class="flex-between">
+            <div style="font-size:12px;color:var(--silver);">NET EXPOSURE SCORE</div>
+            <div class="risk-badge critical">7.4 / 10 — HIGH</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESILIENCE TREND SVG CHART -->
+      <div class="card section animate-in" style="animation-delay:0.55s">
+        <div class="flex-between mb-16">
+          <div class="card-title">Workforce Resilience Trend — 12 Month View</div>
+          <div style="display:flex;gap:16px;font-size:11px;font-family:'JetBrains Mono',monospace;align-items:center;">
+            <div style="display:flex;align-items:center;gap:6px;color:var(--blue-glow)"><div style="width:20px;height:2px;background:var(--blue-electric)"></div>Resilience</div>
+            <div style="display:flex;align-items:center;gap:6px;color:var(--red)"><div style="width:20px;height:2px;background:var(--red)"></div>Exposure</div>
+          </div>
+        </div>
+        <svg viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
+          <defs>
+            <linearGradient id="blueGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#0066ff" stop-opacity="0.3"/>
+              <stop offset="100%" stop-color="#0066ff" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="redGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#ff2244" stop-opacity="0.25"/>
+              <stop offset="100%" stop-color="#ff2244" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <!-- Grid -->
+          <line x1="40" y1="20" x2="40" y2="170" stroke="rgba(0,102,255,0.1)" stroke-width="1"/>
+          <line x1="40" y1="170" x2="880" y2="170" stroke="rgba(0,102,255,0.1)" stroke-width="1"/>
+          <line x1="40" y1="120" x2="880" y2="120" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="4,4"/>
+          <line x1="40" y1="70" x2="880" y2="70" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="4,4"/>
+          <!-- Labels -->
+          <text x="30" y="124" fill="#8ca0b8" font-size="10" text-anchor="end" font-family="JetBrains Mono">50%</text>
+          <text x="30" y="74" fill="#8ca0b8" font-size="10" text-anchor="end" font-family="JetBrains Mono">75%</text>
+          <text x="30" y="24" fill="#8ca0b8" font-size="10" text-anchor="end" font-family="JetBrains Mono">100%</text>
+          <!-- Month labels -->
+          <text x="80" y="185" fill="#8ca0b8" font-size="9" text-anchor="middle" font-family="JetBrains Mono">JAN</text>
+          <text x="153" y="185" fill="#8ca0b8" font-size="9" text-anchor="middle" font-family="JetBrains Mono">FEB</text>
+          <text x="226" y="185" fill="#8ca0b8" font-size="9" text-anchor="middle" font-family="JetBrains Mono">MAR</text>
+          <text x="299" y="185" fill="#8ca0b8" font-size="9" text-anchor="middle" font-family="JetBrains Mono">APR</text>
+          <text x="372" y="185" fill="#8ca0b8" font-size="9" text-anchor="middle" font-family="JetBrains Mono">MAY</text>
+          <text x="445" y="185" fill="#8ca0b8" font-size="9" text-anchor="middle" font-family="JetBrains Mono">JUN</text>
+          <text x="518" y="185" fill="#8ca0b8" font-size="9" text-anchor="middle" font-family="JetBrains Mono">JUL</text>
+          <text x="591" y="185" fill="#8ca0b8" font-size="9" text-anchor="middle" font-family="JetBrains Mono">AUG</text>
+          <text x="664" y="185" fill="#8ca0b8" font-size="9" text-anchor="middle" font-family="JetBrains Mono">SEP</text>
+          <text x="737" y="185" fill="#8ca0b8" font-size="9" text-anchor="middle" font-family="JetBrains Mono">OCT</text>
+          <text x="810" y="185" fill="#8ca0b8" font-size="9" text-anchor="middle" font-family="JetBrains Mono">NOV</text>
+          <text x="865" y="185" fill="#8ca0b8" font-size="9" text-anchor="middle" font-family="JetBrains Mono">DEC</text>
+          <!-- Resilience line (blue) - starts high, dips -->
+          <path d="M80,52 L153,58 L226,55 L299,62 L372,68 L445,74 L518,80 L591,88 L664,85 L737,90 L810,96 L865,102" fill="none" stroke="#0066ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M80,52 L153,58 L226,55 L299,62 L372,68 L445,74 L518,80 L591,88 L664,85 L737,90 L810,96 L865,102 L865,170 L80,170 Z" fill="url(#blueGrad)"/>
+          <!-- Exposure line (red) - starts low, rises -->
+          <path d="M80,148 L153,145 L226,142 L299,138 L372,133 L445,128 L518,120 L591,115 L664,108 L737,104 L810,98 L865,90" fill="none" stroke="#ff2244" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M80,148 L153,145 L226,142 L299,138 L372,133 L445,128 L518,120 L591,115 L664,108 L737,104 L810,98 L865,90 L865,170 L80,170 Z" fill="url(#redGrad)"/>
+          <!-- Crossover marker -->
+          <circle cx="550" cy="124" r="5" fill="none" stroke="#ffcc00" stroke-width="2"/>
+          <text x="555" y="114" fill="#ffcc00" font-size="9" font-family="JetBrains Mono">CROSSOVER</text>
+          <!-- Today marker -->
+          <line x1="865" y1="20" x2="865" y2="170" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-dasharray="3,3"/>
+          <text x="865" y="15" fill="#8ca0b8" font-size="9" text-anchor="middle" font-family="JetBrains Mono">TODAY</text>
+        </svg>
+      </div>
+
+    </div><!-- end command center -->
+
+
+    <!-- ════════ PAGE: EXECUTIVE SUMMARY ════════ -->
+    <div class="page" id="page-summary">
+      <div class="page-header">
+        <div class="page-title">Executive Summary</div>
+        <div class="page-subtitle">
+          <span>Board-Ready Intelligence Snapshot</span>
+          <div class="page-subtitle-dot"></div>
+          <span>Q2 2025</span>
+        </div>
+      </div>
+
+      <div class="grid-main section">
+        <div>
+          <div class="card section animate-in">
+            <div class="card-title">Strategic Situation Assessment</div>
+            <div class="exec-highlight red">
+              <strong style="color:var(--red)">CRITICAL EXPOSURE:</strong> The organisation's cyber workforce is operating at 58% resilience — a deterioration of 8 percentage points over the last quarter. This trajectory, if unaddressed, projects breach readiness falling below operational thresholds by Q4 2025.
+            </div>
+            <div class="exec-highlight orange">
+              <strong style="color:var(--orange)">IMMEDIATE RISK:</strong> Three SOC Analyst vacancies in Tier 1 monitoring, two unfilled Security Architect positions, and 18 certifications expiring within 90 days represent compounding capability debt with direct exposure implications.
+            </div>
+            <div class="exec-highlight">
+              <strong style="color:var(--blue-glow)">OPPORTUNITY:</strong> Targeted investment in 4 high-priority hires combined with a structured capability uplift programme is projected to reduce the Workforce Exposure Score™ from 7.4 to below 5.0 within two quarters — within acceptable board risk appetite.
+            </div>
+            <div class="exec-highlight green">
+              <strong style="color:var(--green)">POSITIVE INDICATOR:</strong> Cloud Security and DevSecOps pipelines show strong candidate quality in the market. Internal succession readiness improved 12% in IAM and Threat Intelligence clusters.
+            </div>
+          </div>
+
+          <div class="card animate-in">
+            <div class="card-title">Board Risk Committee Summary</div>
+            <table class="data-table">
+              <thead><tr><th>Domain</th><th>Status</th><th>Trend</th><th>Priority</th></tr></thead>
+              <tbody>
+                <tr><td>SOC Operations</td><td><span class="risk-badge critical">CRITICAL</span></td><td><span style="color:var(--red)">▼ Deteriorating</span></td><td><span class="tag red">P0</span></td></tr>
+                <tr><td>Security Architecture</td><td><span class="risk-badge high">HIGH</span></td><td><span style="color:var(--orange)">▼ Declining</span></td><td><span class="tag red">P1</span></td></tr>
+                <tr><td>Cloud Security</td><td><span class="risk-badge high">HIGH</span></td><td><span style="color:var(--orange)">→ Stable</span></td><td><span class="tag orange">P1</span></td></tr>
+                <tr><td>Identity & Access Mgmt</td><td><span class="risk-badge moderate">MODERATE</span></td><td><span style="color:var(--yellow)">→ Stable</span></td><td><span class="tag orange">P2</span></td></tr>
+                <tr><td>Threat Intelligence</td><td><span class="risk-badge moderate">MODERATE</span></td><td><span style="color:var(--green)">▲ Improving</span></td><td><span class="tag yellow">P2</span></td></tr>
+                <tr><td>DevSecOps</td><td><span class="risk-badge low">LOW</span></td><td><span style="color:var(--green)">▲ Improving</span></td><td><span class="tag green">P3</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div>
+          <div class="card section animate-in">
+            <div class="card-title">Workforce Resilience Score</div>
+            <div class="score-ring-container" style="flex-direction:column;align-items:center;gap:16px">
+              <div class="score-ring">
+                <svg viewBox="0 0 120 120">
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="8"/>
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#ff7700" stroke-width="8" stroke-dasharray="188 314" stroke-linecap="round"/>
+                </svg>
+                <div class="score-ring-value">
+                  <div class="score-ring-num" style="color:var(--orange)">58%</div>
+                  <div class="score-ring-label">RESILIENCE</div>
+                </div>
+              </div>
+              <div style="width:100%">
+                <div class="indicator-row"><div class="indicator-label"><div class="indicator-dot" style="background:var(--red)"></div>People Readiness</div><div class="indicator-value" style="color:var(--orange)">52%</div></div>
+                <div class="indicator-row"><div class="indicator-label"><div class="indicator-dot" style="background:var(--orange)"></div>Skill Coverage</div><div class="indicator-value" style="color:var(--orange)">61%</div></div>
+                <div class="indicator-row"><div class="indicator-label"><div class="indicator-dot" style="background:var(--yellow)"></div>Process Maturity</div><div class="indicator-value" style="color:var(--yellow)">67%</div></div>
+                <div class="indicator-row"><div class="indicator-label"><div class="indicator-dot" style="background:var(--blue-electric)"></div>Technology Fit</div><div class="indicator-value text-blue">78%</div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card animate-in">
+            <div class="card-title">Recommended Actions</div>
+            <div class="exec-highlight" style="margin-bottom:10px;padding:10px 14px">
+              <span class="tag red" style="margin-bottom:6px;display:inline-block">IMMEDIATE</span><br>
+              Approve 3 critical SOC hires — estimated 14-day impact on exposure reduction
+            </div>
+            <div class="exec-highlight" style="margin-bottom:10px;padding:10px 14px">
+              <span class="tag orange" style="margin-bottom:6px;display:inline-block">30 DAYS</span><br>
+              Initiate cloud security certification refresh for 11 analysts
+            </div>
+            <div class="exec-highlight green" style="margin-bottom:10px;padding:10px 14px">
+              <span class="tag green" style="margin-bottom:6px;display:inline-block">STRATEGIC</span><br>
+              Develop internal SOC succession programme to achieve 1.5x depth
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ════════ PAGE: CYBER TALENT RADAR ════════ -->
+    <div class="page" id="page-radar">
+      <div class="page-header">
+        <div class="page-title">Cyber Talent Radar</div>
+        <div class="page-subtitle">
+          <span>Market Scarcity · Internal Supply · Role Criticality · Succession Readiness</span>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <div class="tab active" onclick="switchTab(this,'radar-grid')">Role Overview</div>
+        <div class="tab" onclick="switchTab(this,'radar-market')">Market Intelligence</div>
+        <div class="tab" onclick="switchTab(this,'radar-succession')">Succession Map</div>
+      </div>
+
+      <div id="radar-grid" class="tab-content animate-in">
+        <div class="grid-3 section" id="role-cards"></div>
+      </div>
+
+      <div id="radar-market" class="tab-content" style="display:none">
+        <div class="grid-2 section animate-in">
+          <div class="card">
+            <div class="card-title">Market Scarcity Index — By Role</div>
+            <div id="market-bars"></div>
+          </div>
+          <div class="card">
+            <div class="card-title">Talent Supply vs Demand (90-Day Window)</div>
+            <svg viewBox="0 0 400 220" style="width:100%">
+              <defs>
+                <linearGradient id="supplyGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#0066ff" stop-opacity="0.4"/>
+                  <stop offset="100%" stop-color="#0066ff" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="demandGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#ff2244" stop-opacity="0.3"/>
+                  <stop offset="100%" stop-color="#ff2244" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <line x1="40" y1="10" x2="40" y2="180" stroke="rgba(0,102,255,0.1)" stroke-width="1"/>
+              <line x1="40" y1="180" x2="390" y2="180" stroke="rgba(0,102,255,0.1)" stroke-width="1"/>
+              <text x="35" y="50" fill="#8ca0b8" font-size="9" text-anchor="end" font-family="JetBrains Mono">High</text>
+              <text x="35" y="120" fill="#8ca0b8" font-size="9" text-anchor="end" font-family="JetBrains Mono">Med</text>
+              <text x="35" y="180" fill="#8ca0b8" font-size="9" text-anchor="end" font-family="JetBrains Mono">Low</text>
+              <!-- Supply -->
+              <path d="M55,150 L110,130 L165,110 L220,95 L275,85 L330,80 L385,78" fill="none" stroke="#0066ff" stroke-width="2" stroke-linecap="round"/>
+              <path d="M55,150 L110,130 L165,110 L220,95 L275,85 L330,80 L385,78 L385,180 L55,180 Z" fill="url(#supplyGrad)"/>
+              <!-- Demand -->
+              <path d="M55,40 L110,45 L165,55 L220,60 L275,70 L330,78 L385,90" fill="none" stroke="#ff2244" stroke-width="2" stroke-linecap="round"/>
+              <path d="M55,40 L110,45 L165,55 L220,60 L275,70 L330,78 L385,90 L385,180 L55,180 Z" fill="url(#demandGrad)"/>
+              <!-- Legend -->
+              <line x1="55" y1="200" x2="80" y2="200" stroke="#0066ff" stroke-width="2"/>
+              <text x="85" y="204" fill="#8ca0b8" font-size="9" font-family="JetBrains Mono">Supply</text>
+              <line x1="145" y1="200" x2="170" y2="200" stroke="#ff2244" stroke-width="2"/>
+              <text x="175" y="204" fill="#8ca0b8" font-size="9" font-family="JetBrains Mono">Demand</text>
+              <text x="215" y="204" fill="#ffcc00" font-size="9" font-family="JetBrains Mono">Gap widening →</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div id="radar-succession" class="tab-content" style="display:none">
+        <div class="card animate-in">
+          <div class="card-title">Succession Readiness Map</div>
+          <table class="data-table">
+            <thead><tr><th>Role</th><th>Incumbents</th><th>Ready Now</th><th>Ready 12M</th><th>Succession Depth</th><th>Risk</th></tr></thead>
+            <tbody>
+              <tr><td class="text-white">CISO</td><td>1</td><td>0</td><td>1</td><td><div class="progress-bar" style="width:80px"><div class="progress-fill orange" style="width:40%"></div></div></td><td><span class="risk-badge high">HIGH</span></td></tr>
+              <tr><td class="text-white">Security Architect</td><td>2</td><td>0</td><td>1</td><td><div class="progress-bar" style="width:80px"><div class="progress-fill red" style="width:25%"></div></div></td><td><span class="risk-badge critical">CRITICAL</span></td></tr>
+              <tr><td class="text-white">SOC Manager</td><td>1</td><td>1</td><td>2</td><td><div class="progress-bar" style="width:80px"><div class="progress-fill green" style="width:80%"></div></div></td><td><span class="risk-badge low">LOW</span></td></tr>
+              <tr><td class="text-white">IAM Lead</td><td>1</td><td>0</td><td>1</td><td><div class="progress-bar" style="width:80px"><div class="progress-fill orange" style="width:45%"></div></div></td><td><span class="risk-badge moderate">MODERATE</span></td></tr>
+              <tr><td class="text-white">Cloud Security Lead</td><td>1</td><td>1</td><td>2</td><td><div class="progress-bar" style="width:80px"><div class="progress-fill blue" style="width:65%"></div></div></td><td><span class="risk-badge moderate">MODERATE</span></td></tr>
+              <tr><td class="text-white">Threat Intel Lead</td><td>1</td><td>0</td><td>0</td><td><div class="progress-bar" style="width:80px"><div class="progress-fill red" style="width:10%"></div></div></td><td><span class="risk-badge critical">CRITICAL</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ════════ PAGE: WORKFORCE RISK ENGINE ════════ -->
+    <div class="page" id="page-risk">
+      <div class="page-header">
+        <div class="page-title">Workforce Risk Engine</div>
+        <div class="page-subtitle"><span>Dynamic Risk Modelling · Real-Time Calculation</span></div>
+      </div>
+
+      <div class="grid-main section animate-in">
+        <div class="card">
+          <div class="card-title">Risk Factor Matrix</div>
+          <table class="data-table">
+            <thead><tr><th>Risk Factor</th><th>Current Score</th><th>Weight</th><th>Contribution</th><th>Trend</th></tr></thead>
+            <tbody id="risk-matrix"></tbody>
+          </table>
+        </div>
+        <div class="card">
+          <div class="card-title">Composite Risk Level</div>
+          <div style="text-align:center;padding:24px 0">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--silver);letter-spacing:0.15em;margin-bottom:16px">WORKFORCE RISK RATING</div>
+            <div style="font-family:'Syne',sans-serif;font-size:64px;font-weight:800;color:var(--red);text-shadow:0 0 40px rgba(255,34,68,0.4);line-height:1">HIGH</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--orange);margin:12px 0">Score: 7.4 / 10</div>
+            <div class="divider"></div>
+            <div style="font-size:12px;color:var(--silver);line-height:1.8">
+              Requires <span style="color:var(--white-pure);font-weight:600">Board Escalation</span><br>
+              SLA: <span style="color:var(--red)">Immediate Action Required</span><br>
+              Remediation horizon: <span style="color:var(--blue-glow)">60 days</span>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div id="risk-by-team">
+            <div style="font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--silver);letter-spacing:0.1em;margin-bottom:12px">RISK BY TEAM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ════════ PAGE: CAPABILITY INTELLIGENCE ════════ -->
+    <div class="page" id="page-capability">
+      <div class="page-header">
+        <div class="page-title">Capability Intelligence</div>
+        <div class="page-subtitle"><span>Skills · Certifications · Training · Succession Depth</span></div>
+      </div>
+
+      <div class="tabs">
+        <div class="tab active" onclick="switchTab(this,'cap-skills')">Skill Coverage</div>
+        <div class="tab" onclick="switchTab(this,'cap-certs')">Certifications</div>
+        <div class="tab" onclick="switchTab(this,'cap-training')">Training Readiness</div>
+      </div>
+
+      <div id="cap-skills" class="tab-content animate-in">
+        <div class="card section">
+          <div class="card-title">Capability Coverage Map — Cyber Security Domain</div>
+          <div id="cap-bars"></div>
+        </div>
+      </div>
+
+      <div id="cap-certs" class="tab-content" style="display:none">
+        <div class="grid-2 section animate-in">
+          <div class="card">
+            <div class="card-title">Active Certifications</div>
+            <div id="cert-list"></div>
+          </div>
+          <div class="card">
+            <div class="card-title">Certification Health by Expiry Window</div>
+            <div style="margin-bottom:16px">
+              <div class="cap-row">
+                <div class="cap-label" style="width:120px">Expiring &lt;30d</div>
+                <div class="cap-bar"><div class="cap-fill" style="width:20%;background:var(--red)"></div></div>
+                <div class="cap-pct text-red">6</div>
+              </div>
+              <div class="cap-row">
+                <div class="cap-label" style="width:120px">Expiring 30-90d</div>
+                <div class="cap-bar"><div class="cap-fill" style="width:40%;background:var(--orange)"></div></div>
+                <div class="cap-pct text-orange">12</div>
+              </div>
+              <div class="cap-row">
+                <div class="cap-label" style="width:120px">Expiring 90-180d</div>
+                <div class="cap-bar"><div class="cap-fill" style="width:55%;background:var(--yellow)"></div></div>
+                <div class="cap-pct" style="color:var(--yellow)">17</div>
+              </div>
+              <div class="cap-row">
+                <div class="cap-label" style="width:120px">Valid &gt;180d</div>
+                <div class="cap-bar"><div class="cap-fill" style="width:85%;background:var(--green)"></div></div>
+                <div class="cap-pct text-green">41</div>
+              </div>
+            </div>
+            <div class="exec-highlight red" style="font-size:12px">
+              ⚠ 18 certifications expiring within 90 days — immediate renewal programme required
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="cap-training" class="tab-content" style="display:none">
+        <div class="card animate-in">
+          <div class="card-title">Training Readiness by Team</div>
+          <table class="data-table">
+            <thead><tr><th>Team</th><th>Enrolled</th><th>Completion Rate</th><th>Gap Score</th><th>Priority</th></tr></thead>
+            <tbody>
+              <tr><td class="text-white">SOC Tier 1</td><td>8/12</td><td><div class="progress-bar" style="width:120px;display:inline-block"><div class="progress-fill orange" style="width:45%"></div></div> 45%</td><td><span style="color:var(--red)">HIGH</span></td><td><span class="tag red">URGENT</span></td></tr>
+              <tr><td class="text-white">Security Architecture</td><td>3/5</td><td><div class="progress-bar" style="width:120px;display:inline-block"><div class="progress-fill orange" style="width:60%"></div></div> 60%</td><td><span style="color:var(--orange)">MED</span></td><td><span class="tag orange">HIGH</span></td></tr>
+              <tr><td class="text-white">Cloud Security</td><td>7/9</td><td><div class="progress-bar" style="width:120px;display:inline-block"><div class="progress-fill blue" style="width:78%"></div></div> 78%</td><td><span style="color:var(--yellow)">LOW</span></td><td><span class="tag yellow">MEDIUM</span></td></tr>
+              <tr><td class="text-white">IAM Team</td><td>5/6</td><td><div class="progress-bar" style="width:120px;display:inline-block"><div class="progress-fill green" style="width:83%"></div></div> 83%</td><td><span style="color:var(--green)">NONE</span></td><td><span class="tag green">LOW</span></td></tr>
+              <tr><td class="text-white">Threat Intelligence</td><td>4/6</td><td><div class="progress-bar" style="width:120px;display:inline-block"><div class="progress-fill orange" style="width:67%"></div></div> 67%</td><td><span style="color:var(--yellow)">MED</span></td><td><span class="tag orange">HIGH</span></td></tr>
+              <tr><td class="text-white">DevSecOps</td><td>9/10</td><td><div class="progress-bar" style="width:120px;display:inline-block"><div class="progress-fill green" style="width:90%"></div></div> 90%</td><td><span style="color:var(--green)">NONE</span></td><td><span class="tag green">LOW</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ════════ PAGE: DIGITAL TWIN ════════ -->
+    <div class="page" id="page-twin">
+      <div class="page-header">
+        <div class="page-title">Cyber Workforce Digital Twin</div>
+        <div class="page-subtitle"><span>Simulate workforce scenarios and predict resilience impact</span></div>
+      </div>
+
+      <div class="grid-main section animate-in">
+        <div class="card">
+          <div class="card-title">Scenario Configuration</div>
+          <div style="margin-bottom:20px">
+            <div style="font-size:12px;color:var(--silver);margin-bottom:16px">Select a scenario or configure custom parameters below.</div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px" id="scenario-btns">
+              <button class="btn btn-outline" onclick="loadScenario('freeze')">Hiring Freeze</button>
+              <button class="btn btn-outline" onclick="loadScenario('resignations')">Mass Resignations</button>
+              <button class="btn btn-outline" onclick="loadScenario('training-drop')">Training Budget Cut</button>
+              <button class="btn btn-outline" onclick="loadScenario('incident')">Major Cyber Incident</button>
+              <button class="btn btn-outline" onclick="loadScenario('uplift')">Capability Uplift</button>
+            </div>
+          </div>
+
+          <div class="sim-control">
+            <div class="sim-label">Security Engineer Resignations <span id="tv-eng">0</span></div>
+            <input type="range" class="sim-slider" min="0" max="5" value="0" id="twin-eng" oninput="document.getElementById('tv-eng').textContent=this.value;runTwin()">
+          </div>
+          <div class="sim-control">
+            <div class="sim-label">Hiring Freeze Duration (months) <span id="tv-freeze">0</span></div>
+            <input type="range" class="sim-slider" min="0" max="12" value="0" id="twin-freeze" oninput="document.getElementById('tv-freeze').textContent=this.value;runTwin()">
+          </div>
+          <div class="sim-control">
+            <div class="sim-label">Training Budget Reduction (%) <span id="tv-train">0</span>%</div>
+            <input type="range" class="sim-slider" min="0" max="100" value="0" id="twin-train" oninput="document.getElementById('tv-train').textContent=this.value;runTwin()">
+          </div>
+          <div class="sim-control">
+            <div class="sim-label">Cyber Incidents (per month) <span id="tv-inc">0</span></div>
+            <input type="range" class="sim-slider" min="0" max="10" value="0" id="twin-inc" oninput="document.getElementById('tv-inc').textContent=this.value;runTwin()">
+          </div>
+        </div>
+
+        <div>
+          <div class="twin-output section">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;color:var(--silver);margin-bottom:16px;text-transform:uppercase">Predicted Impact</div>
+            <div style="text-align:center;margin-bottom:20px">
+              <div style="font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--silver);margin-bottom:4px">PROJECTED EXPOSURE SCORE</div>
+              <div style="font-family:'Syne',sans-serif;font-size:52px;font-weight:800;color:var(--orange);text-shadow:0 0 30px rgba(255,119,0,0.3)" id="twin-score">7.4</div>
+              <div style="font-size:11px;color:var(--silver);font-family:'JetBrains Mono',monospace" id="twin-delta">← Baseline</div>
+            </div>
+            <div id="twin-impacts">
+              <div class="twin-scenario">
+                <div class="indicator-dot" style="background:var(--silver)"></div>
+                <span style="font-size:12px;color:var(--silver)">Configure parameters to see impact</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:20px">
+            <div class="card-title">Resilience Projection</div>
+            <svg viewBox="0 0 300 120" style="width:100%">
+              <line x1="30" y1="10" x2="30" y2="100" stroke="rgba(0,102,255,0.1)" stroke-width="1"/>
+              <line x1="30" y1="100" x2="290" y2="100" stroke="rgba(0,102,255,0.1)" stroke-width="1"/>
+              <line x1="30" y1="100" x2="30" y2="10" stroke="rgba(0,102,255,0.05)" stroke-width="1"/>
+              <path id="twin-chart" d="M30,50 L90,55 L150,60 L210,68 L270,75" fill="none" stroke="#ff7700" stroke-width="2.5" stroke-linecap="round"/>
+              <text x="25" y="14" fill="#8ca0b8" font-size="8" text-anchor="end" font-family="JetBrains Mono">100%</text>
+              <text x="25" y="54" fill="#8ca0b8" font-size="8" text-anchor="end" font-family="JetBrains Mono">50%</text>
+              <text x="25" y="104" fill="#8ca0b8" font-size="8" text-anchor="end" font-family="JetBrains Mono">0%</text>
+              <text x="30" y="114" fill="#8ca0b8" font-size="8" font-family="JetBrains Mono">Now</text>
+              <text x="150" y="114" fill="#8ca0b8" font-size="8" text-anchor="middle" font-family="JetBrains Mono">6M</text>
+              <text x="270" y="114" fill="#8ca0b8" font-size="8" text-anchor="end" font-family="JetBrains Mono">12M</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ════════ PAGE: RISK SIMULATOR ════════ -->
+    <div class="page" id="page-simulator">
+      <div class="page-header">
+        <div class="page-title">Executive Risk Simulator</div>
+        <div class="page-subtitle"><span>Adjust strategic levers · Predict resilience outcomes · Model business impact</span></div>
+      </div>
+
+      <div class="grid-main section animate-in">
+        <div class="card">
+          <div class="card-title">Strategic Parameter Controls</div>
+
+          <div class="sim-control">
+            <div class="sim-label">Cyber Workforce Budget (R million) <span id="sv-budget">42</span>M</div>
+            <input type="range" class="sim-slider" min="20" max="120" value="42" id="sim-budget" oninput="document.getElementById('sv-budget').textContent=this.value;runSim()">
+          </div>
+          <div class="sim-control">
+            <div class="sim-label">Headcount Authorised <span id="sv-head">38</span></div>
+            <input type="range" class="sim-slider" min="20" max="80" value="38" id="sim-head" oninput="document.getElementById('sv-head').textContent=this.value;runSim()">
+          </div>
+          <div class="sim-control">
+            <div class="sim-label">Expected Attrition Rate <span id="sv-attr">18</span>%</div>
+            <input type="range" class="sim-slider" min="0" max="50" value="18" id="sim-attr" oninput="document.getElementById('sv-attr').textContent=this.value;runSim()">
+          </div>
+          <div class="sim-control">
+            <div class="sim-label">Hiring Urgency <span id="sv-urg">Medium</span></div>
+            <input type="range" class="sim-slider" min="1" max="3" value="2" id="sim-urg" oninput="document.getElementById('sv-urg').textContent=['Low','Medium','High'][this.value-1];runSim()">
+          </div>
+          <div class="sim-control">
+            <div class="sim-label">Training Investment (R million) <span id="sv-train">3.2</span>M</div>
+            <input type="range" class="sim-slider" min="0" max="15" step="0.1" value="3.2" id="sim-train" oninput="document.getElementById('sv-train').textContent=parseFloat(this.value).toFixed(1);runSim()">
+          </div>
+        </div>
+
+        <div>
+          <div class="card section">
+            <div class="card-title">Simulation Output</div>
+            <div class="grid-2" style="margin-bottom:16px;gap:12px">
+              <div style="background:var(--navy-mid);border-radius:6px;padding:14px;border:1px solid var(--border)">
+                <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--silver);letter-spacing:0.1em;margin-bottom:8px">RESILIENCE SCORE</div>
+                <div style="font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:var(--orange)" id="sim-resilience">58%</div>
+              </div>
+              <div style="background:var(--navy-mid);border-radius:6px;padding:14px;border:1px solid var(--border)">
+                <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--silver);letter-spacing:0.1em;margin-bottom:8px">EXPOSURE SCORE</div>
+                <div style="font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:var(--red)" id="sim-exposure">7.4</div>
+              </div>
+              <div style="background:var(--navy-mid);border-radius:6px;padding:14px;border:1px solid var(--border)">
+                <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--silver);letter-spacing:0.1em;margin-bottom:8px">BUSINESS IMPACT</div>
+                <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:var(--white-pure)" id="sim-impact">R 48M Risk</div>
+              </div>
+              <div style="background:var(--navy-mid);border-radius:6px;padding:14px;border:1px solid var(--border)">
+                <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--silver);letter-spacing:0.1em;margin-bottom:8px">TIME TO RESILIENCE</div>
+                <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:var(--cyan)" id="sim-time">9 Months</div>
+              </div>
+            </div>
+            <div style="font-size:11px;color:var(--silver);line-height:1.8" id="sim-recommendation">
+              Adjust parameters to see strategic recommendations.
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">ROI Projection</div>
+            <div class="indicator-row">
+              <div class="indicator-label">Investment Required</div>
+              <div class="indicator-value text-blue" id="sim-investment">R 14.2M</div>
+            </div>
+            <div class="indicator-row">
+              <div class="indicator-label">Risk Reduction Value</div>
+              <div class="indicator-value text-green" id="sim-rrv">R 48M</div>
+            </div>
+            <div class="indicator-row">
+              <div class="indicator-label">ROI</div>
+              <div class="indicator-value" style="color:var(--cyan)" id="sim-roi">3.4x</div>
+            </div>
+            <div class="indicator-row">
+              <div class="indicator-label">Payback Period</div>
+              <div class="indicator-value text-white" id="sim-payback">7 months</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ════════ PAGE: CYBER HIRING INTELLIGENCE ════════ -->
+    <div class="page" id="page-hiring">
+      <div class="page-header">
+        <div class="page-title">Cyber Hiring Intelligence</div>
+        <div class="page-subtitle"><span>Pipeline Analytics · Candidate Quality · Sourcing Intelligence</span></div>
+      </div>
+
+      <div class="grid-4 section animate-in">
+        <div class="metric-card">
+          <div class="metric-label">Active Pipeline</div>
+          <div class="metric-value blue">47</div>
+          <div class="metric-sub">Candidates across 8 roles</div>
+        </div>
+        <div class="metric-card warn">
+          <div class="metric-label">Avg Time-to-Fill</div>
+          <div class="metric-value orange">67<span style="font-size:14px;color:var(--silver)"> days</span></div>
+          <div class="metric-sub">Target: 45 days</div>
+        </div>
+        <div class="metric-card safe">
+          <div class="metric-label">Quality Index</div>
+          <div class="metric-value green">74<span style="font-size:14px;color:var(--silver)">%</span></div>
+          <div class="metric-sub">Top-quartile candidates</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">Offer Acceptance</div>
+          <div class="metric-value cyan">68<span style="font-size:14px;color:var(--silver)">%</span></div>
+          <div class="metric-sub">Industry avg: 72%</div>
+        </div>
+      </div>
+
+      <div class="grid-main section animate-in">
+        <div class="card">
+          <div class="card-title">Active Candidate Pipeline</div>
+          <div id="candidate-pipeline"></div>
+        </div>
+        <div class="card">
+          <div class="card-title">Sourcing Channel Effectiveness</div>
+          <div id="sourcing-chart"></div>
+          <div class="divider"></div>
+          <div class="card-title">Hiring Bottleneck Analysis</div>
+          <div>
+            <div class="cap-row">
+              <div class="cap-label">Screening</div>
+              <div class="cap-bar"><div class="cap-fill green" style="width:88%"></div></div>
+              <div class="cap-pct text-green">88%</div>
+            </div>
+            <div class="cap-row">
+              <div class="cap-label">Technical Test</div>
+              <div class="cap-bar"><div class="cap-fill blue" style="width:61%"></div></div>
+              <div class="cap-pct text-blue">61%</div>
+            </div>
+            <div class="cap-row">
+              <div class="cap-label">Panel Interview</div>
+              <div class="cap-bar"><div class="cap-fill orange" style="width:44%"></div></div>
+              <div class="cap-pct text-orange">44%</div>
+            </div>
+            <div class="cap-row">
+              <div class="cap-label">Offer Stage</div>
+              <div class="cap-bar"><div class="cap-fill red" style="width:32%"></div></div>
+              <div class="cap-pct text-red">32%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ════════ PAGE: AI COPILOT ════════ -->
+    <div class="page" id="page-copilot">
+      <div class="page-header">
+        <div class="page-title">AI Executive Copilot</div>
+        <div class="page-subtitle"><span>Intelligence-Grade Workforce Analytics · Natural Language Interface</span></div>
+      </div>
+
+      <div class="grid-main section animate-in">
+        <div class="card" style="display:flex;flex-direction:column;padding:0;overflow:hidden">
+          <div style="padding:16px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px">
+            <div style="width:32px;height:32px;background:linear-gradient(135deg,var(--blue-electric),var(--cyan));clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);display:flex;align-items:center;justify-content:center;font-size:14px">⬡</div>
+            <div>
+              <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:var(--white-pure)">SHIELD AI Copilot</div>
+              <div style="font-size:10px;color:var(--green);font-family:'JetBrains Mono',monospace;">● Online · Workforce Intelligence Mode</div>
+            </div>
+          </div>
+          <div class="ai-chat">
+            <div class="chat-messages" id="chat-messages">
+              <div class="chat-msg ai">
+                <div class="chat-avatar ai">⬡</div>
+                <div class="chat-bubble">
+                  Good day. I'm your <strong>SHIELD AI Copilot</strong> — your executive-grade workforce intelligence assistant. I have full access to your cyber workforce data, capability maps, risk scores, and hiring pipeline.<br><br>
+                  I can answer strategic questions, predict risks, and recommend actions. What would you like to explore?
+                </div>
+              </div>
+            </div>
+            <div class="quick-questions">
+              <button class="quick-q" onclick="sendQuick('Which teams are highest risk right now?')">Highest risk teams?</button>
+              <button class="quick-q" onclick="sendQuick('Which hires would reduce our exposure fastest?')">Priority hires?</button>
+              <button class="quick-q" onclick="sendQuick('Predict our readiness in the next quarter')">Q3 readiness?</button>
+              <button class="quick-q" onclick="sendQuick('What is our current board-level exposure?')">Board exposure?</button>
+            </div>
+            <div class="chat-input-row">
+              <input type="text" class="chat-input" id="chat-input" placeholder="Ask an executive question..." onkeydown="if(event.key==='Enter')sendChat()">
+              <button class="chat-send" onclick="sendChat()">SEND</button>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="card section">
+            <div class="card-title">AI Intelligence Insights</div>
+            <div class="exec-highlight red" style="font-size:12px">
+              <strong>⚡ PRIORITY ALERT:</strong> SOC Tier 1 team is 3 analysts short. At current incident velocity, mean-time-to-detect will exceed acceptable SLA thresholds within 6 weeks.
+            </div>
+            <div class="exec-highlight orange" style="font-size:12px">
+              <strong>📊 TREND:</strong> Market availability of Security Architects in your region has declined 22% YoY. Time-to-fill has extended from 45 to 67 days. Recommend proactive talent mapping now.
+            </div>
+            <div class="exec-highlight" style="font-size:12px">
+              <strong>💡 OPPORTUNITY:</strong> Three internal candidates in the SOC Tier 2 pipeline show Security Architect readiness within 9 months with targeted development investment.
+            </div>
+            <div class="exec-highlight green" style="font-size:12px">
+              <strong>✅ POSITIVE:</strong> DevSecOps team at 90% training completion — highest in the organisation. Recommend this model as the uplift framework for other teams.
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">Recommended Executive Actions</div>
+            <div>
+              <div class="indicator-row">
+                <div class="indicator-label"><span class="tag red" style="margin-right:8px">P0</span>Approve SOC emergency headcount</div>
+              </div>
+              <div class="indicator-row">
+                <div class="indicator-label"><span class="tag orange" style="margin-right:8px">P1</span>Launch cert renewal programme</div>
+              </div>
+              <div class="indicator-row">
+                <div class="indicator-label"><span class="tag orange" style="margin-right:8px">P1</span>Initiate Architect talent mapping</div>
+              </div>
+              <div class="indicator-row">
+                <div class="indicator-label"><span class="tag yellow" style="margin-right:8px">P2</span>Succession planning — Threat Intel</div>
+              </div>
+              <div class="indicator-row">
+                <div class="indicator-label"><span class="tag green" style="margin-right:8px">P3</span>Scale DevSecOps training model</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ════════ PAGE: EXECUTIVE REPORTING ════════ -->
+    <div class="page" id="page-reports">
+      <div class="page-header">
+        <div class="page-title">Executive Reporting</div>
+        <div class="page-subtitle"><span>Auto-Generated Board Packs · Risk Reports · Workforce Summaries</span></div>
+      </div>
+
+      <div style="display:flex;gap:12px;margin-bottom:24px;flex-wrap:wrap" class="animate-in">
+        <button class="btn btn-primary" onclick="generateReport('board')">⬡ Generate Board Pack</button>
+        <button class="btn btn-outline" onclick="generateReport('risk')">Risk Report</button>
+        <button class="btn btn-outline" onclick="generateReport('workforce')">Workforce Summary</button>
+        <button class="btn btn-ghost" onclick="generateReport('trend')">Trend Analysis</button>
+      </div>
+
+      <div id="report-output" class="animate-in">
+        <div class="report-card">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px">
+            <div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.15em;color:var(--blue-glow);margin-bottom:8px">BOARD RISK COMMITTEE — AUTO-GENERATED</div>
+              <div style="font-family:'Syne',sans-serif;font-size:20px;font-weight:700;color:var(--white-pure)">Cyber Workforce Risk Report</div>
+              <div style="font-size:12px;color:var(--silver);margin-top:4px">Q2 2025 · Prepared by CYBERHIRE SHIELD™ Intelligence Engine</div>
+            </div>
+            <div style="text-align:right">
+              <div class="risk-badge critical">HIGH EXPOSURE</div>
+              <div style="font-size:10px;color:var(--silver);margin-top:6px;font-family:'JetBrains Mono',monospace">CLASSIFICATION: RESTRICTED</div>
+            </div>
+          </div>
+          <div class="grid-4" style="margin-bottom:20px">
+            <div style="text-align:center;padding:12px;background:rgba(255,34,68,0.06);border-radius:6px;border:1px solid rgba(255,34,68,0.15)">
+              <div style="font-size:24px;font-family:'Syne',sans-serif;font-weight:800;color:var(--red)">7.4</div>
+              <div style="font-size:10px;color:var(--silver);font-family:'JetBrains Mono',monospace">EXPOSURE</div>
+            </div>
+            <div style="text-align:center;padding:12px;background:rgba(255,119,0,0.06);border-radius:6px;border:1px solid rgba(255,119,0,0.15)">
+              <div style="font-size:24px;font-family:'Syne',sans-serif;font-weight:800;color:var(--orange)">58%</div>
+              <div style="font-size:10px;color:var(--silver);font-family:'JetBrains Mono',monospace">RESILIENCE</div>
+            </div>
+            <div style="text-align:center;padding:12px;background:rgba(0,102,255,0.06);border-radius:6px;border:1px solid var(--border)">
+              <div style="font-size:24px;font-family:'Syne',sans-serif;font-weight:800;color:var(--blue-glow)">12</div>
+              <div style="font-size:10px;color:var(--silver);font-family:'JetBrains Mono',monospace">OPEN ROLES</div>
+            </div>
+            <div style="text-align:center;padding:12px;background:rgba(0,230,118,0.04);border-radius:6px;border:1px solid rgba(0,230,118,0.15)">
+              <div style="font-size:24px;font-family:'Syne',sans-serif;font-weight:800;color:var(--green)">71%</div>
+              <div style="font-size:10px;color:var(--silver);font-family:'JetBrains Mono',monospace">COVERAGE</div>
+            </div>
+          </div>
+          <div style="font-size:13px;color:var(--silver-light);line-height:1.8;margin-bottom:20px">
+            <strong style="color:var(--white-pure)">Executive Summary:</strong> The cyber workforce presents a HIGH exposure profile entering Q3 2025. Vacancy rates in Tier 1 SOC operations (34%) and Security Architecture (40%) represent the most immediate operational risk. The Workforce Resilience Index™ has deteriorated 8 percentage points since Q1, driven primarily by attrition in critical roles and a market-driven time-to-fill extension from 45 to 67 days.
+          </div>
+          <div class="divider"></div>
+          <div style="font-size:13px;color:var(--silver-light);line-height:1.8;margin-bottom:16px">
+            <strong style="color:var(--white-pure)">Strategic Recommendations for Board Approval:</strong><br>
+            1. Approve emergency headcount of 3 SOC Analysts with expedited hiring SLA of 21 days.<br>
+            2. Authorise training budget of R3.2M for certification renewal affecting 18 at-risk credentials.<br>
+            3. Commission cyber talent market study to address Security Architect scarcity risk.<br>
+            4. Activate succession planning programme for Threat Intelligence Lead and Security Architect pipeline.
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <button class="btn btn-primary">Download PDF</button>
+            <button class="btn btn-outline">Share with Board</button>
+            <button class="btn btn-ghost">Schedule Delivery</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ════════ PAGE: ABOUT THE CREATOR ════════ -->
+    <div class="page" id="page-about">
+      <div class="page-header">
+        <div class="page-title">About the Creator</div>
+        <div class="page-subtitle">
+          <span>Platform Origin · Authorship · Portfolio Identity</span>
+        </div>
+      </div>
+
+      <div class="info-page-hero animate-in">
+        <div style="display:flex;align-items:flex-start;gap:28px;flex-wrap:wrap">
+          <div class="creator-monogram">KM</div>
+          <div style="flex:1;min-width:280px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.2em;color:var(--blue-glow);text-transform:uppercase;margin-bottom:10px">Platform Author &amp; Director</div>
+            <div class="creator-name-large">Kelebohile Mokoena</div>
+            <div class="creator-title">HR Innovation · Talent Acquisition · Workforce Intelligence</div>
+            <div class="creator-domains">
+              <span class="creator-domain-tag">HR Innovation</span>
+              <span class="creator-domain-tag">Talent Acquisition</span>
+              <span class="creator-domain-tag">Workforce Intelligence</span>
+              <span class="creator-domain-tag">People Analytics</span>
+              <span class="creator-domain-tag">AI &amp; Future of Work</span>
+              <span class="creator-domain-tag">HR Systems Design</span>
+              <span class="creator-domain-tag">Digital Transformation</span>
+            </div>
+            <div class="creator-statement">
+              CYBERHIRE SHIELD™ was independently conceptualised and directed by Kelebohile Mokoena as a portfolio demonstration exploring executive workforce resilience, cyber talent strategy and intelligent workforce systems. No proprietary company information is used. All data is synthetic and created for demonstration purposes only.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-2 section animate-in">
+        <div class="card">
+          <div class="card-title">Platform Philosophy</div>
+          <div class="exec-highlight" style="font-size:13px;margin-bottom:12px">
+            <strong style="color:var(--white-pure)">Core Thesis:</strong> Cyber resilience is not only a technology problem. It is fundamentally a people, capability, and readiness problem — and those dimensions demand the same executive intelligence as any other strategic risk.
+          </div>
+          <div class="exec-highlight green" style="font-size:13px;margin-bottom:12px">
+            <strong style="color:var(--green)">Innovation Angle:</strong> This platform bridges the gap between HR intelligence and cyber risk management — positioning workforce data as a first-class input to enterprise security strategy.
+          </div>
+          <div class="exec-highlight orange" style="font-size:13px">
+            <strong style="color:var(--orange)">Design Principle:</strong> Executive-grade. Data-dense. Actionable. Every data point in this platform answers one question: what should leadership decide next?
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Product Credentials</div>
+          <div class="settings-group" style="margin-bottom:0">
+            <div class="settings-row">
+              <div class="settings-label">Product</div>
+              <div class="settings-value">CYBERHIRE SHIELD™</div>
+            </div>
+            <div class="settings-row">
+              <div class="settings-label">Version</div>
+              <div class="settings-value">V1.0 · 2026</div>
+            </div>
+            <div class="settings-row">
+              <div class="settings-label">Classification</div>
+              <div class="settings-value">Portfolio · Independent Concept</div>
+            </div>
+            <div class="settings-row">
+              <div class="settings-label">Author</div>
+              <div class="settings-value">Kelebohile Mokoena</div>
+            </div>
+            <div class="settings-row">
+              <div class="settings-label">Owner</div>
+              <div class="settings-value">Kelebohile Mokoena</div>
+            </div>
+            <div class="settings-row">
+              <div class="settings-label">Copyright</div>
+              <div class="settings-value">© 2026 All Rights Reserved</div>
+            </div>
+            <div class="settings-row">
+              <div class="settings-label">Deployment</div>
+              <div class="settings-value muted">Single-File · No Dependencies</div>
+            </div>
+            <div class="settings-row">
+              <div class="settings-label">Data</div>
+              <div class="settings-value muted">100% Synthetic · Demo Only</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card animate-in">
+        <div class="card-title">Modules Included in This Prototype</div>
+        <div class="grid-3" style="gap:12px">
+          <div style="padding:16px;background:rgba(0,102,255,0.05);border-radius:6px;border:1px solid var(--border)">
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:var(--white-pure);margin-bottom:4px">Executive Command Center</div>
+            <div style="font-size:11px;color:var(--silver)">Live exposure scoring, resilience index, heatmap, trend analytics</div>
+          </div>
+          <div style="padding:16px;background:rgba(0,102,255,0.05);border-radius:6px;border:1px solid var(--border)">
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:var(--white-pure);margin-bottom:4px">Cyber Talent Radar</div>
+            <div style="font-size:11px;color:var(--silver)">Market scarcity, internal supply, succession readiness by role</div>
+          </div>
+          <div style="padding:16px;background:rgba(0,102,255,0.05);border-radius:6px;border:1px solid var(--border)">
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:var(--white-pure);margin-bottom:4px">Workforce Risk Engine</div>
+            <div style="font-size:11px;color:var(--silver)">Dynamic multi-factor risk modelling with composite output</div>
+          </div>
+          <div style="padding:16px;background:rgba(0,102,255,0.05);border-radius:6px;border:1px solid var(--border)">
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:var(--white-pure);margin-bottom:4px">Capability Intelligence</div>
+            <div style="font-size:11px;color:var(--silver)">Skills coverage maps, certification tracking, training readiness</div>
+          </div>
+          <div style="padding:16px;background:rgba(0,102,255,0.05);border-radius:6px;border:1px solid var(--border)">
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:var(--white-pure);margin-bottom:4px">Digital Twin Simulator</div>
+            <div style="font-size:11px;color:var(--silver)">What-if scenario modelling with predicted resilience impact</div>
+          </div>
+          <div style="padding:16px;background:rgba(0,102,255,0.05);border-radius:6px;border:1px solid var(--border)">
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:var(--white-pure);margin-bottom:4px">Executive Risk Simulator</div>
+            <div style="font-size:11px;color:var(--silver)">Strategic levers: budget, headcount, attrition, urgency, training</div>
+          </div>
+          <div style="padding:16px;background:rgba(0,102,255,0.05);border-radius:6px;border:1px solid var(--border)">
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:var(--white-pure);margin-bottom:4px">Cyber Hiring Intelligence</div>
+            <div style="font-size:11px;color:var(--silver)">Pipeline analytics, quality index, sourcing and bottleneck data</div>
+          </div>
+          <div style="padding:16px;background:rgba(0,102,255,0.05);border-radius:6px;border:1px solid var(--border)">
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:var(--white-pure);margin-bottom:4px">AI Executive Copilot</div>
+            <div style="font-size:11px;color:var(--silver)">Natural language workforce intelligence and strategic recommendations</div>
+          </div>
+          <div style="padding:16px;background:rgba(0,102,255,0.05);border-radius:6px;border:1px solid var(--border)">
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:var(--white-pure);margin-bottom:4px">Executive Reporting</div>
+            <div style="font-size:11px;color:var(--silver)">Auto-generated board packs, risk reports, workforce summaries</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Signature block -->
+      <div style="text-align:center;padding:48px 0 20px">
+        <div style="font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:var(--white-pure);letter-spacing:-0.01em;margin-bottom:8px">Kelebohile Mokoena</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.2em;color:var(--silver);text-transform:uppercase;margin-bottom:16px">Designed · Directed · Delivered</div>
+        <div style="width:60px;height:1px;background:linear-gradient(to right,transparent,var(--blue-electric),transparent);margin:0 auto 16px"></div>
+        <div style="font-size:11px;color:rgba(139,160,184,0.4);font-family:'JetBrains Mono',monospace;letter-spacing:0.1em">CYBERHIRE SHIELD™ · V1.0 · © 2026 · INDEPENDENT PORTFOLIO CONCEPT</div>
+      </div>
+    </div>
+
+
+    <!-- ════════ PAGE: LICENSE & OWNERSHIP ════════ -->
+    <div class="page" id="page-license">
+      <div class="page-header">
+        <div class="page-title">License &amp; Ownership</div>
+        <div class="page-subtitle"><span>Copyright · Usage Rights · Attribution</span></div>
+      </div>
+
+      <div class="license-block animate-in">
+        <div class="license-year">2026</div>
+        <div class="license-owner">Kelebohile Mokoena</div>
+        <div class="license-rights">Copyright © 2026 · All Rights Reserved</div>
+
+        <div class="license-term">
+          <div class="license-term-icon">⬡</div>
+          <div><strong style="color:var(--white-pure)">Ownership:</strong> CYBERHIRE SHIELD™ is the original intellectual property of Kelebohile Mokoena. This includes the product concept, visual design, system architecture, module design, data models, and all written content contained within this prototype.</div>
+        </div>
+        <div class="license-term">
+          <div class="license-term-icon">📋</div>
+          <div><strong style="color:var(--white-pure)">Permitted Use:</strong> This prototype is published for portfolio, educational, and professional demonstration purposes. Viewing, sharing a link to, and referencing this work in an attribution context is permitted.</div>
+        </div>
+        <div class="license-term">
+          <div class="license-term-icon">🚫</div>
+          <div><strong style="color:var(--white-pure)">Prohibited Use:</strong> No permission is granted to reproduce, commercialise, redistribute, rebrand, or represent this work — in whole or in part — as original work without explicit written permission from Kelebohile Mokoena.</div>
+        </div>
+        <div class="license-term">
+          <div class="license-term-icon">🔒</div>
+          <div><strong style="color:var(--white-pure)">Data Notice:</strong> All data, metrics, names, and scenarios presented in this prototype are entirely synthetic and created for demonstration purposes. No real company, individual, client, or confidential information is represented.</div>
+        </div>
+        <div class="license-term">
+          <div class="license-term-icon">✉️</div>
+          <div><strong style="color:var(--white-pure)">Permissions &amp; Enquiries:</strong> For licensing, collaboration, or reproduction enquiries, direct communication to the author is required. All rights are reserved and enforced under applicable intellectual property law.</div>
+        </div>
+      </div>
+
+      <div class="grid-2 section animate-in">
+        <div class="card">
+          <div class="card-title">Product Identity</div>
+          <div class="settings-group" style="margin-bottom:0">
+            <div class="settings-row"><div class="settings-label">Product Name</div><div class="settings-value">CYBERHIRE SHIELD™</div></div>
+            <div class="settings-row"><div class="settings-label">Version</div><div class="settings-value">V1.0</div></div>
+            <div class="settings-row"><div class="settings-label">Year</div><div class="settings-value">2026</div></div>
+            <div class="settings-row"><div class="settings-label">Author</div><div class="settings-value">Kelebohile Mokoena</div></div>
+            <div class="settings-row"><div class="settings-label">Owner</div><div class="settings-value">Kelebohile Mokoena</div></div>
+            <div class="settings-row"><div class="settings-label">Classification</div><div class="settings-value muted">Independent Portfolio Concept</div></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Usage Summary</div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="display:flex;align-items:center;gap:12px;padding:12px;background:rgba(0,230,118,0.05);border-radius:6px;border:1px solid rgba(0,230,118,0.15)">
+              <span style="color:var(--green);font-size:16px">✓</span>
+              <span style="font-size:13px;color:var(--silver-light)">View &amp; demonstrate for portfolio purposes</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;padding:12px;background:rgba(0,230,118,0.05);border-radius:6px;border:1px solid rgba(0,230,118,0.15)">
+              <span style="color:var(--green);font-size:16px">✓</span>
+              <span style="font-size:13px;color:var(--silver-light)">Reference in CV, LinkedIn, or interviews</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;padding:12px;background:rgba(0,230,118,0.05);border-radius:6px;border:1px solid rgba(0,230,118,0.15)">
+              <span style="color:var(--green);font-size:16px">✓</span>
+              <span style="font-size:13px;color:var(--silver-light)">Share link with attribution to creator</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;padding:12px;background:rgba(255,34,68,0.05);border-radius:6px;border:1px solid rgba(255,34,68,0.15)">
+              <span style="color:var(--red);font-size:16px">✕</span>
+              <span style="font-size:13px;color:var(--silver-light)">Reproduce or redistribute without permission</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;padding:12px;background:rgba(255,34,68,0.05);border-radius:6px;border:1px solid rgba(255,34,68,0.15)">
+              <span style="color:var(--red);font-size:16px">✕</span>
+              <span style="font-size:13px;color:var(--silver-light)">Commercialise or represent as own work</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center;padding:32px;background:rgba(0,102,255,0.04);border:1px solid var(--border);border-radius:8px;margin-bottom:24px" class="animate-in">
+        <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:var(--white-pure);margin-bottom:6px">CYBERHIRE SHIELD™</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--silver);letter-spacing:0.12em;margin-bottom:12px">COPYRIGHT © 2026 KELEBOHILE MOKOENA · ALL RIGHTS RESERVED</div>
+        <div style="width:40px;height:1px;background:var(--blue-electric);margin:0 auto 12px"></div>
+        <div style="font-size:12px;color:rgba(139,160,184,0.5);font-family:'JetBrains Mono',monospace">INDEPENDENT PORTFOLIO CONCEPT · V1.0 · EDUCATIONAL &amp; DEMONSTRATION USE</div>
+      </div>
+    </div>
+
+
+    <!-- ════════ PAGE: SETTINGS ════════ -->
+    <div class="page" id="page-settings">
+      <div class="page-header">
+        <div class="page-title">Settings</div>
+        <div class="page-subtitle"><span>Platform Configuration · Product Metadata · Authorship</span></div>
+      </div>
+
+      <div class="grid-2 section animate-in">
+        <div>
+          <div class="settings-group">
+            <div class="settings-group-header">Product Information</div>
+            <div class="settings-row"><div class="settings-label">Product Name</div><div class="settings-value">CYBERHIRE SHIELD™</div></div>
+            <div class="settings-row"><div class="settings-label">Version</div><div class="settings-value">V1.0</div></div>
+            <div class="settings-row"><div class="settings-label">Release Year</div><div class="settings-value">2026</div></div>
+            <div class="settings-row"><div class="settings-label">Build Type</div><div class="settings-value muted">Single-File HTML · No Dependencies</div></div>
+            <div class="settings-row"><div class="settings-label">Environment</div><div class="settings-value muted">Portfolio Demo · Local / Static Hosting</div></div>
+          </div>
+
+          <div class="settings-group">
+            <div class="settings-group-header">Authorship &amp; Ownership</div>
+            <div class="settings-row"><div class="settings-label">Created by</div><div class="settings-value">Kelebohile Mokoena</div></div>
+            <div class="settings-row"><div class="settings-label">Owner</div><div class="settings-value">Kelebohile Mokoena</div></div>
+            <div class="settings-row"><div class="settings-label">Copyright</div><div class="settings-value">© 2026 Kelebohile Mokoena</div></div>
+            <div class="settings-row"><div class="settings-label">Classification</div><div class="settings-value muted">Independent Portfolio Concept</div></div>
+            <div class="settings-row"><div class="settings-label">Data Type</div><div class="settings-value muted">100% Synthetic · For Demonstration</div></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="settings-group">
+            <div class="settings-group-header">Display Preferences</div>
+            <div class="settings-row">
+              <div class="settings-label">Theme</div>
+              <div class="settings-value">Midnight Executive Dark</div>
+            </div>
+            <div class="settings-row">
+              <div class="settings-label">Colour Palette</div>
+              <div class="settings-value muted">Midnight Black · Deep Navy · Electric Blue · Silver</div>
+            </div>
+            <div class="settings-row">
+              <div class="settings-label">Typography</div>
+              <div class="settings-value muted">Syne · JetBrains Mono · Inter</div>
+            </div>
+            <div class="settings-row">
+              <div class="settings-label">Animations</div>
+              <div class="settings-value">Enabled</div>
+            </div>
+            <div class="settings-row">
+              <div class="settings-label">Keyboard Nav</div>
+              <div class="settings-value muted">Arrow Keys · Enabled</div>
+            </div>
+          </div>
+
+          <div class="settings-group">
+            <div class="settings-group-header">Platform Modules</div>
+            <div class="settings-row"><div class="settings-label">Command Center</div><div class="settings-value">Active</div></div>
+            <div class="settings-row"><div class="settings-label">Digital Twin</div><div class="settings-value">Active</div></div>
+            <div class="settings-row"><div class="settings-label">AI Copilot</div><div class="settings-value">Active · Simulated</div></div>
+            <div class="settings-row"><div class="settings-label">Risk Simulator</div><div class="settings-value">Active</div></div>
+            <div class="settings-row"><div class="settings-label">Executive Reporting</div><div class="settings-value">Active</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card animate-in">
+        <div class="card-title">Portfolio Notice</div>
+        <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap">
+          <div class="creator-monogram" style="width:52px;height:52px;font-size:18px">KM</div>
+          <div style="flex:1;min-width:260px">
+            <div style="font-family:'Syne',sans-serif;font-size:17px;font-weight:700;color:var(--white-pure);margin-bottom:4px">Kelebohile Mokoena</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--blue-glow);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:12px">Creator · Designer · Director</div>
+            <div style="font-size:13px;color:var(--silver-light);line-height:1.8">
+              This platform was independently conceptualised, designed, and directed by Kelebohile Mokoena as a portfolio demonstration of executive-grade HR innovation and workforce intelligence system design. All interactions are simulated. All data is synthetic. No confidential or proprietary information is used.
+            </div>
+            <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
+              <span class="creator-domain-tag">HR Innovation</span>
+              <span class="creator-domain-tag">Talent Systems Design</span>
+              <span class="creator-domain-tag">AI &amp; Future of Work</span>
+              <span class="creator-domain-tag">People Analytics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end content -->
+</div><!-- end main -->
+</div><!-- end app -->
+
+<div style="position:fixed;bottom:16px;right:20px;font-family:'JetBrains Mono',monospace;font-size:8px;color:rgba(139,160,184,0.25);letter-spacing:0.1em;z-index:200;pointer-events:none;text-align:right">
+  CYBERHIRE SHIELD™ · V1.0<br>© 2026 KELEBOHILE MOKOENA
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════
+// SPLASH SCREEN
+// ═══════════════════════════════════════════════════
+function enterPlatform() {
+  const splash = document.getElementById('splash');
+  splash.classList.add('hidden');
+  setTimeout(() => { splash.style.display = 'none'; }, 900);
+}
+
+// Auto-dismiss splash after 12 seconds (for portfolio demos)
+setTimeout(() => {
+  const splash = document.getElementById('splash');
+  if (splash && !splash.classList.contains('hidden')) { enterPlatform(); }
+}, 12000);
+
+// ═══════════════════════════════════════════════════
+// CLOCK
+// ═══════════════════════════════════════════════════
+function updateClock() {
+  const now = new Date();
+  const t = now.toLocaleTimeString('en-ZA',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+  const d = now.toLocaleDateString('en-ZA',{day:'2-digit',month:'short',year:'numeric'});
+  document.getElementById('clock').textContent = `${d} ${t}`;
+  document.getElementById('last-updated').textContent = t;
+}
+updateClock();
+setInterval(updateClock, 1000);
+
+// ═══════════════════════════════════════════════════
+// NAVIGATION
+// ═══════════════════════════════════════════════════
+const pageTitles = {
+  command: 'Command Center',
+  summary: 'Executive Summary',
+  radar: 'Cyber Talent Radar',
+  risk: 'Workforce Risk Engine',
+  capability: 'Capability Intelligence',
+  twin: 'Digital Twin Simulator',
+  simulator: 'Executive Risk Simulator',
+  hiring: 'Cyber Hiring Intelligence',
+  copilot: 'AI Executive Copilot',
+  reports: 'Executive Reporting',
+  about: 'About the Creator',
+  license: 'License & Ownership',
+  settings: 'Settings'
+};
+
+function navigate(page, el) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById('page-'+page).classList.add('active');
+  el.classList.add('active');
+  document.getElementById('topbar-section').textContent = pageTitles[page] || page;
+  window.scrollTo(0,0);
+}
+
+// ═══════════════════════════════════════════════════
+// TAB SWITCHING
+// ═══════════════════════════════════════════════════
+function switchTab(el, contentId) {
+  const parent = el.parentElement;
+  parent.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  const section = el.closest('.page') || document;
+  section.querySelectorAll('.tab-content').forEach(tc => tc.style.display = 'none');
+  const target = section.querySelector('#'+contentId) || document.getElementById(contentId);
+  if (target) { target.style.display = 'block'; target.classList.add('animate-in'); }
+}
+
+// ═══════════════════════════════════════════════════
+// HEATMAP
+// ═══════════════════════════════════════════════════
+const heatmapData = [
+  {label:'SOC T1',risk:'critical'},{label:'SOC T2',risk:'high'},{label:'SOC T3',risk:'moderate'},
+  {label:'SecArch',risk:'critical'},{label:'IAM',risk:'moderate'},{label:'CloudSec',risk:'high'},
+  {label:'DevSecOps',risk:'low'},{label:'ThreatInt',risk:'high'},{label:'GRC',risk:'low'},
+  {label:'AppSec',risk:'moderate'},{label:'PenTest',risk:'low'},{label:'SIEM',risk:'high'},
+  {label:'IR',risk:'moderate'},{label:'DataSec',risk:'moderate'},{label:'PKI',risk:'high'},
+  {label:'CASB',risk:'low'},{label:'Vuln Mgmt',risk:'critical'},{label:'RedTeam',risk:'moderate'},
+  {label:'CyberEdu',risk:'low'},{label:'SecOps',risk:'high'},{label:'FW Admin',risk:'moderate'},
+];
+
+const riskColors = {
+  critical:'rgba(255,34,68,0.85)',
+  high:'rgba(255,119,0,0.75)',
+  moderate:'rgba(255,204,0,0.65)',
+  low:'rgba(0,230,118,0.55)'
+};
+
+function buildHeatmap() {
+  const hm = document.getElementById('heatmap');
+  heatmapData.forEach(d => {
+    const cell = document.createElement('div');
+    cell.className = 'heatmap-cell';
+    cell.style.background = riskColors[d.risk];
+    cell.setAttribute('data-tip', `${d.label}: ${d.risk.toUpperCase()}`);
+    hm.appendChild(cell);
+  });
+}
+buildHeatmap();
+
+// ═══════════════════════════════════════════════════
+// ROLE CARDS
+// ═══════════════════════════════════════════════════
+const roles = [
+  {name:'SOC Analyst',scarcity:82,supply:18,criticality:95,succession:35,replacement:88,risk:'critical',open:3},
+  {name:'Security Architect',scarcity:78,supply:22,criticality:90,succession:20,replacement:85,risk:'critical',open:2},
+  {name:'IAM Specialist',scarcity:60,supply:40,criticality:80,succession:55,replacement:65,risk:'moderate',open:1},
+  {name:'Threat Intelligence',scarcity:75,supply:25,criticality:85,succession:30,replacement:80,risk:'high',open:2},
+  {name:'Cloud Security Eng',scarcity:70,supply:30,criticality:88,succession:45,replacement:72,risk:'high',open:1},
+  {name:'DevSecOps Engineer',scarcity:55,supply:45,criticality:75,succession:60,replacement:58,risk:'low',open:0},
+];
+
+function buildRoleCards() {
+  const cont = document.getElementById('role-cards');
+  if(!cont) return;
+  roles.forEach(r => {
+    const card = document.createElement('div');
+    card.className='role-card';
+    const riskClass = r.risk;
+    const riskBadge = `<span class="risk-badge ${riskClass}">${r.risk.toUpperCase()}</span>`;
+    card.innerHTML = `
+      <div class="role-name">${r.name}</div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+        ${riskBadge}
+        ${r.open>0?`<span class="tag red">${r.open} Open</span>`:`<span class="tag green">Staffed</span>`}
+      </div>
+      <div>
+        <div style="display:flex;justify-content:space-between;font-size:10px;font-family:'JetBrains Mono',monospace;color:var(--silver);margin-bottom:4px"><span>Market Scarcity</span><span>${r.scarcity}%</span></div>
+        <div class="progress-bar mb-8"><div class="progress-fill red" style="width:${r.scarcity}%"></div></div>
+        <div style="display:flex;justify-content:space-between;font-size:10px;font-family:'JetBrains Mono',monospace;color:var(--silver);margin-bottom:4px"><span>Internal Supply</span><span>${r.supply}%</span></div>
+        <div class="progress-bar mb-8"><div class="progress-fill green" style="width:${r.supply}%"></div></div>
+        <div style="display:flex;justify-content:space-between;font-size:10px;font-family:'JetBrains Mono',monospace;color:var(--silver);margin-bottom:4px"><span>Succession Depth</span><span>${r.succession}%</span></div>
+        <div class="progress-bar"><div class="progress-fill blue" style="width:${r.succession}%"></div></div>
+      </div>
+    `;
+    cont.appendChild(card);
+  });
+}
+buildRoleCards();
+
+// Market bars
+function buildMarketBars() {
+  const cont = document.getElementById('market-bars');
+  if(!cont) return;
+  roles.forEach(r => {
+    cont.innerHTML += `
+      <div class="cap-row">
+        <div class="cap-label" style="width:160px;font-size:11px">${r.name}</div>
+        <div class="cap-bar"><div class="cap-fill red" style="width:${r.scarcity}%"></div></div>
+        <div class="cap-pct text-red" style="width:40px">${r.scarcity}%</div>
+      </div>
+    `;
+  });
+}
+buildMarketBars();
+
+// ═══════════════════════════════════════════════════
+// RISK MATRIX
+// ═══════════════════════════════════════════════════
+const riskFactors = [
+  {name:'Vacancy Rate',score:8.2,weight:'25%',contrib:2.05,trend:'up'},
+  {name:'Attrition Risk',score:6.8,weight:'20%',contrib:1.36,trend:'up'},
+  {name:'Capability Gaps',score:7.1,weight:'20%',contrib:1.42,trend:'stable'},
+  {name:'Training Deficit',score:5.9,weight:'15%',contrib:0.89,trend:'down'},
+  {name:'Time-to-Fill',score:6.4,weight:'12%',contrib:0.77,trend:'up'},
+  {name:'Cert Expiry Risk',score:5.8,weight:'8%',contrib:0.46,trend:'up'},
+];
+
+function buildRiskMatrix() {
+  const tbody = document.getElementById('risk-matrix');
+  if(!tbody) return;
+  riskFactors.forEach(f => {
+    const trendArrow = f.trend==='up'?`<span style="color:var(--red)">▲ Rising</span>`:f.trend==='down'?`<span style="color:var(--green)">▼ Falling</span>`:`<span style="color:var(--silver)">→ Stable</span>`;
+    const level = f.score>=7.5?'critical':f.score>=6?'high':f.score>=4?'moderate':'low';
+    tbody.innerHTML += `
+      <tr>
+        <td class="text-white">${f.name}</td>
+        <td><span class="risk-badge ${level}">${f.score}/10</span></td>
+        <td style="font-family:'JetBrains Mono',monospace">${f.weight}</td>
+        <td style="font-family:'Syne',sans-serif;font-weight:700;color:var(--orange)">+${f.contrib.toFixed(2)}</td>
+        <td>${trendArrow}</td>
+      </tr>
+    `;
+  });
+
+  const rbt = document.getElementById('risk-by-team');
+  if(!rbt) return;
+  const teams = [
+    {name:'SOC Operations',score:9.1,c:'critical'},
+    {name:'Security Architecture',score:8.3,c:'critical'},
+    {name:'Cloud Security',score:7.2,c:'high'},
+    {name:'Threat Intelligence',score:6.8,c:'high'},
+    {name:'IAM Team',score:5.5,c:'moderate'},
+    {name:'DevSecOps',score:3.2,c:'low'},
+  ];
+  teams.forEach(t => {
+    rbt.innerHTML += `
+      <div class="indicator-row">
+        <div class="indicator-label" style="font-size:12px">${t.name}</div>
+        <span class="risk-badge ${t.c}">${t.score}/10</span>
+      </div>
+    `;
+  });
+}
+buildRiskMatrix();
+
+// ═══════════════════════════════════════════════════
+// CAPABILITY BARS
+// ═══════════════════════════════════════════════════
+const capabilities = [
+  {name:'SIEM/SOC Operations',pct:62,color:'orange'},
+  {name:'Cloud Security (AWS/Azure)',pct:58,color:'orange'},
+  {name:'Identity & Access Mgmt',pct:74,color:'blue'},
+  {name:'Threat Intelligence',pct:55,color:'red'},
+  {name:'Security Architecture',pct:47,color:'red'},
+  {name:'DevSecOps/SecOps',pct:81,color:'green'},
+  {name:'Incident Response',pct:68,color:'blue'},
+  {name:'Penetration Testing',pct:72,color:'blue'},
+  {name:'GRC & Compliance',pct:79,color:'green'},
+  {name:'Application Security',pct:64,color:'orange'},
+  {name:'Data Security/POPIA',pct:77,color:'blue'},
+  {name:'Vulnerability Management',pct:61,color:'orange'},
+];
+
+function buildCapBars() {
+  const cont = document.getElementById('cap-bars');
+  if(!cont) return;
+  capabilities.forEach(c => {
+    cont.innerHTML += `
+      <div class="cap-row">
+        <div class="cap-label">${c.name}</div>
+        <div class="cap-bar"><div class="cap-fill ${c.color}" style="width:${c.pct}%"></div></div>
+        <div class="cap-pct" style="color:var(--${c.color==='orange'?'orange':c.color==='red'?'red':c.color==='green'?'green':'blue-glow'})">${c.pct}%</div>
+      </div>
+    `;
+  });
+}
+buildCapBars();
+
+// Certs
+const certs = [
+  {name:'CISSP',icon:'🛡️',count:8,color:'rgba(0,102,255,0.15)'},
+  {name:'CISM',icon:'📋',count:5,color:'rgba(0,102,255,0.15)'},
+  {name:'CEH',icon:'🎯',count:12,color:'rgba(0,230,118,0.1)'},
+  {name:'CompTIA Security+',icon:'⚡',count:18,color:'rgba(0,230,118,0.1)'},
+  {name:'AWS Security',icon:'☁️',count:7,color:'rgba(0,212,255,0.1)'},
+  {name:'Azure Security',icon:'🔷',count:6,color:'rgba(0,212,255,0.1)'},
+  {name:'OSCP',icon:'🔴',count:3,color:'rgba(255,34,68,0.1)'},
+  {name:'CRISC',icon:'📊',count:4,color:'rgba(255,119,0,0.1)'},
+];
+
+function buildCerts() {
+  const cont = document.getElementById('cert-list');
+  if(!cont) return;
+  certs.forEach(c => {
+    cont.innerHTML += `
+      <div class="cert-item">
+        <div class="cert-icon" style="background:${c.color}">${c.icon}</div>
+        <div class="cert-name">${c.name}</div>
+        <div class="cert-count">${c.count}</div>
+      </div>
+    `;
+  });
+}
+buildCerts();
+
+// ═══════════════════════════════════════════════════
+// DIGITAL TWIN SIMULATOR
+// ═══════════════════════════════════════════════════
+function runTwin() {
+  const eng = +document.getElementById('twin-eng').value;
+  const freeze = +document.getElementById('twin-freeze').value;
+  const train = +document.getElementById('twin-train').value;
+  const inc = +document.getElementById('twin-inc').value;
+
+  let delta = 0;
+  delta += eng * 0.4;
+  delta += freeze * 0.15;
+  delta += train * 0.02;
+  delta += inc * 0.3;
+
+  const newScore = Math.min(10, (7.4 + delta)).toFixed(1);
+  const diff = (newScore - 7.4).toFixed(1);
+
+  const scoreEl = document.getElementById('twin-score');
+  const deltaEl = document.getElementById('twin-delta');
+  scoreEl.textContent = newScore;
+  const color = newScore >= 8.5 ? 'var(--red)' : newScore >= 7 ? 'var(--orange)' : newScore >= 5 ? 'var(--yellow)' : 'var(--green)';
+  scoreEl.style.color = color;
+  deltaEl.textContent = diff >= 0 ? `▲ +${diff} vs baseline` : `▼ ${diff} vs baseline`;
+  deltaEl.style.color = diff >= 0 ? 'var(--red)' : 'var(--green)';
+
+  const impactsEl = document.getElementById('twin-impacts');
+  let html = '';
+  if(eng > 0) html += `<div class="twin-scenario"><div class="indicator-dot" style="background:var(--red)"></div><span style="font-size:12px;color:var(--silver-light)">${eng} Security Engineer resignation${eng>1?'s':''}</span><div class="twin-impact text-red">+${(eng*0.4).toFixed(1)} exposure</div></div>`;
+  if(freeze > 0) html += `<div class="twin-scenario"><div class="indicator-dot" style="background:var(--orange)"></div><span style="font-size:12px;color:var(--silver-light)">${freeze} month hiring freeze</span><div class="twin-impact text-orange">+${(freeze*0.15).toFixed(1)} exposure</div></div>`;
+  if(train > 0) html += `<div class="twin-scenario"><div class="indicator-dot" style="background:var(--yellow)"></div><span style="font-size:12px;color:var(--silver-light)">${train}% training budget cut</span><div class="twin-impact" style="color:var(--yellow)">+${(train*0.02).toFixed(1)} exposure</div></div>`;
+  if(inc > 0) html += `<div class="twin-scenario"><div class="indicator-dot" style="background:var(--purple)"></div><span style="font-size:12px;color:var(--silver-light)">${inc} incidents/month</span><div class="twin-impact" style="color:var(--purple)">+${(inc*0.3).toFixed(1)} exposure</div></div>`;
+  if(!html) html = `<div class="twin-scenario"><div class="indicator-dot" style="background:var(--silver)"></div><span style="font-size:12px;color:var(--silver)">Adjust parameters above to model scenarios</span></div>`;
+  impactsEl.innerHTML = html;
+}
+
+function loadScenario(s) {
+  const scenarios = {
+    freeze: [0,6,0,0],
+    resignations: [3,0,0,0],
+    'training-drop': [0,0,75,0],
+    incident: [0,0,0,5],
+    uplift: [0,0,0,0],
+  };
+  const v = scenarios[s];
+  document.getElementById('twin-eng').value = v[0]; document.getElementById('tv-eng').textContent = v[0];
+  document.getElementById('twin-freeze').value = v[1]; document.getElementById('tv-freeze').textContent = v[1];
+  document.getElementById('twin-train').value = v[2]; document.getElementById('tv-train').textContent = v[2];
+  document.getElementById('twin-inc').value = v[3]; document.getElementById('tv-inc').textContent = v[3];
+  runTwin();
+}
+
+// ═══════════════════════════════════════════════════
+// EXECUTIVE RISK SIMULATOR
+// ═══════════════════════════════════════════════════
+function runSim() {
+  const budget = +document.getElementById('sim-budget').value;
+  const head = +document.getElementById('sim-head').value;
+  const attr = +document.getElementById('sim-attr').value;
+  const urg = +document.getElementById('sim-urg').value;
+  const train = +document.getElementById('sim-train').value;
+
+  // Simplified model
+  const budgetFactor = budget / 80;
+  const headFactor = head / 60;
+  const attrPenalty = attr / 100;
+  const urgBonus = urg / 3;
+  const trainFactor = train / 10;
+
+  let resilience = Math.round(Math.min(95, Math.max(20,
+    30 + (budgetFactor*25) + (headFactor*20) + (urgBonus*10) + (trainFactor*15) - (attrPenalty*30)
+  )));
+  let exposure = +(Math.max(1, Math.min(10, 10 - (resilience/14))).toFixed(1));
+  let businessImpact = Math.round((exposure * 6.5));
+  let timeMonths = Math.max(2, Math.round(12 - (resilience/12)));
+  let investment = Math.round(budget * 0.34);
+  let rrv = businessImpact;
+  let roi = (rrv / investment).toFixed(1);
+  let payback = Math.max(1, Math.round(investment / (rrv/12)));
+
+  const resEl = document.getElementById('sim-resilience');
+  const expEl = document.getElementById('sim-exposure');
+  const impEl = document.getElementById('sim-impact');
+  const timeEl = document.getElementById('sim-time');
+
+  resEl.textContent = resilience + '%';
+  resEl.style.color = resilience >= 75 ? 'var(--green)' : resilience >= 60 ? 'var(--yellow)' : 'var(--red)';
+  expEl.textContent = exposure;
+  expEl.style.color = exposure >= 7.5 ? 'var(--red)' : exposure >= 5 ? 'var(--orange)' : 'var(--green)';
+  impEl.textContent = `R ${businessImpact}M Risk`;
+  timeEl.textContent = `${timeMonths} Months`;
+
+  document.getElementById('sim-investment').textContent = `R ${investment}M`;
+  document.getElementById('sim-rrv').textContent = `R ${rrv}M`;
+  document.getElementById('sim-roi').textContent = `${roi}x`;
+  document.getElementById('sim-payback').textContent = `${payback} months`;
+
+  let rec = '';
+  if(resilience < 50) rec = `⚠️ <strong style="color:var(--red)">CRITICAL:</strong> Current parameters predict breach of resilience threshold. Recommend immediate budget increase and headcount approval.`;
+  else if(resilience < 70) rec = `📊 <strong style="color:var(--orange)">MODERATE RISK:</strong> Parameters show improving trajectory but remain below 70% resilience target. Increase training investment and reduce attrition through retention initiatives.`;
+  else rec = `✅ <strong style="color:var(--green)">ON TRACK:</strong> Current parameters project resilience above 75% target within ${timeMonths} months. Monitor attrition and maintain training cadence.`;
+  document.getElementById('sim-recommendation').innerHTML = rec;
+}
+
+// ═══════════════════════════════════════════════════
+// HIRING PIPELINE
+// ═══════════════════════════════════════════════════
+const candidates = [
+  {initials:'TM',name:'Thabo Mokoena',role:'SOC Analyst',stage:'Technical Test',quality:88,bg:'#0066ff'},
+  {initials:'SN',name:'Siya Nkosi',role:'Security Architect',stage:'Panel Interview',quality:94,bg:'#7c4dff'},
+  {initials:'LV',name:'Lisa Van Wyk',role:'Cloud Security Eng',stage:'Offer Stage',quality:91,bg:'#00aa55'},
+  {initials:'AF',name:'Amos Ferreira',role:'SOC Analyst',stage:'Screening',quality:72,bg:'#0033aa'},
+  {initials:'KD',name:'Keabetswe Dube',role:'IAM Specialist',stage:'Technical Test',quality:85,bg:'#ff7700'},
+  {initials:'RP',name:'Roshan Pillay',role:'Threat Intelligence',stage:'Panel Interview',quality:90,bg:'#009abf'},
+];
+
+const stageColors = {
+  'Screening':'var(--silver)',
+  'Technical Test':'var(--blue-glow)',
+  'Panel Interview':'var(--orange)',
+  'Offer Stage':'var(--green)'
+};
+
+function buildPipeline() {
+  const cont = document.getElementById('candidate-pipeline');
+  if(!cont) return;
+  candidates.forEach(c => {
+    const qc = c.quality>=90?'green':c.quality>=80?'blue':c.quality>=70?'orange':'red';
+    cont.innerHTML += `
+      <div class="candidate-row">
+        <div class="cand-avatar" style="background:${c.bg}">${c.initials}</div>
+        <div style="flex:1">
+          <div style="font-size:13px;font-weight:600;color:var(--white-pure)">${c.name}</div>
+          <div style="font-size:11px;color:var(--silver)">${c.role}</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-size:11px;color:${stageColors[c.stage]||'var(--silver)'};font-family:'JetBrains Mono',monospace">${c.stage}</div>
+          <div style="font-size:11px;color:var(--silver)">Quality: <span class="text-${qc}">${c.quality}%</span></div>
+        </div>
+      </div>
+    `;
+  });
+
+  const src = document.getElementById('sourcing-chart');
+  if(!src) return;
+  const channels = [
+    {name:'LinkedIn',pct:40,color:'blue'},
+    {name:'Referrals',pct:25,color:'green'},
+    {name:'Job Portals',pct:20,color:'orange'},
+    {name:'Agencies',pct:10,color:'cyan'},
+    {name:'Direct',pct:5,color:'purple'},
+  ];
+  channels.forEach(ch => {
+    src.innerHTML += `
+      <div class="cap-row">
+        <div class="cap-label" style="width:100px">${ch.name}</div>
+        <div class="cap-bar"><div class="cap-fill ${ch.color}" style="width:${ch.pct*2}%"></div></div>
+        <div class="cap-pct" style="color:var(--${ch.color==='blue'?'blue-glow':ch.color==='cyan'?'cyan':ch.color})">${ch.pct}%</div>
+      </div>
+    `;
+  });
+}
+buildPipeline();
+
+// ═══════════════════════════════════════════════════
+// AI COPILOT
+// ═══════════════════════════════════════════════════
+const aiResponses = {
+  'Which teams are highest risk right now?': `
+    Based on current intelligence, here is the exposure ranking:<br><br>
+    🔴 <strong style="color:var(--red)">CRITICAL:</strong> SOC Operations (9.1/10) — 34% vacancy rate, burnout at peak, MTTD degrading<br>
+    🔴 <strong style="color:var(--red)">CRITICAL:</strong> Security Architecture (8.3/10) — 2 vacancies, 0 internal successors ready<br>
+    🟠 <strong style="color:var(--orange)">HIGH:</strong> Cloud Security (7.2/10) — 1 open role, 3 certs expiring in 30 days<br>
+    🟠 <strong style="color:var(--orange)">HIGH:</strong> Threat Intelligence (6.8/10) — No ready successors for Lead role<br><br>
+    <strong>Recommendation:</strong> Escalate SOC and Architecture to Board. Initiate emergency hiring protocols within 48 hours.
+  `,
+  'Which hires would reduce our exposure fastest?': `
+    Analysis of your 12 open roles against current exposure drivers:<br><br>
+    1. <strong style="color:var(--red)">SOC Analyst x3</strong> — reduces exposure by -1.8 points. Fastest ROI given market availability and in-progress pipeline<br>
+    2. <strong style="color:var(--orange)">Security Architect x1</strong> — reduces by -1.2 points. Market scarcity is high; activate now before pipeline ages<br>
+    3. <strong style="color:var(--blue-glow)">Cloud Security Engineer x1</strong> — reduces by -0.7 points. Good candidate quality in current market<br><br>
+    Filling these <strong>5 roles</strong> projects exposure score moving from 7.4 → 4.7 within 90 days.
+  `,
+  'Predict our readiness in the next quarter': `
+    <strong>Q3 2025 Readiness Projection:</strong><br><br>
+    📊 <strong>Scenario A — No Action:</strong> Resilience falls to 48%. Exposure reaches 8.1. Board breach threshold likely by August.<br><br>
+    📈 <strong>Scenario B — Recommended Actions Executed:</strong> Resilience recovers to 68% by Q3 end. Exposure reduces to 5.9. Within acceptable risk appetite.<br><br>
+    📍 <strong>Key variables:</strong> SOC hiring timeline (currently tracking 67-day TTF), certification renewal programme launch, and attrition in Architecture team.<br><br>
+    Confidence level: <span style="color:var(--blue-glow)">78%</span> based on current pipeline data.
+  `,
+  'What is our current board-level exposure?': `
+    <strong>Board Risk Summary as of Q2 2025:</strong><br><br>
+    • Workforce Exposure Score™: <span style="color:var(--red)">7.4/10 (HIGH)</span><br>
+    • Workforce Resilience Index™: <span style="color:var(--orange)">58% (Below 70% target)</span><br>
+    • Financial risk exposure (modelled): <span style="color:var(--white-pure)">R 48M</span><br>
+    • Remediation investment required: <span style="color:var(--blue-glow)">R 14.2M</span><br>
+    • ROI on remediation: <span style="color:var(--green)">3.4x</span><br><br>
+    This warrants formal Board Risk Committee escalation under your existing risk appetite framework. I can generate the full board pack for review.
+  `
+};
+
+const defaultResponses = [
+  `I've analysed your workforce data. This requires deeper intelligence review. Based on current indicators, your SOC team remains the highest priority intervention point with a 9.1/10 exposure rating.`,
+  `That's a strategic question with multiple dimensions. Current data suggests the most impactful lever is <strong>headcount recovery in critical roles</strong>, followed by a structured capability uplift programme targeting your 9 identified skill gaps.`,
+  `Reviewing current pipeline and risk data... Your hiring intelligence shows 47 candidates across 8 active roles. The SOC Analyst pipeline has the strongest quality index at 88% — proceed to offer stage for top candidates immediately.`,
+];
+let dCount = 0;
+
+function sendChat() {
+  const input = document.getElementById('chat-input');
+  const msg = input.value.trim();
+  if(!msg) return;
+  addChatMsg(msg, 'user');
+  input.value = '';
+  showTyping();
+  setTimeout(() => {
+    removeTyping();
+    const response = aiResponses[msg] || defaultResponses[dCount++ % defaultResponses.length];
+    addChatMsg(response, 'ai');
+  }, 1200 + Math.random()*800);
+}
+
+function sendQuick(msg) {
+  document.getElementById('chat-input').value = msg;
+  sendChat();
+}
+
+function addChatMsg(text, role) {
+  const msgs = document.getElementById('chat-messages');
+  const div = document.createElement('div');
+  div.className = `chat-msg ${role}`;
+  const avatar = role==='ai'
+    ? `<div class="chat-avatar ai">⬡</div>`
+    : `<div class="chat-avatar user-av">EX</div>`;
+  div.innerHTML = `${avatar}<div class="chat-bubble">${text}</div>`;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function showTyping() {
+  const msgs = document.getElementById('chat-messages');
+  const div = document.createElement('div');
+  div.className = 'chat-msg ai';
+  div.id = 'typing-indicator';
+  div.innerHTML = `<div class="chat-avatar ai">⬡</div><div class="chat-bubble"><div class="typing-dots"><span></span><span></span><span></span></div></div>`;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function removeTyping() {
+  const t = document.getElementById('typing-indicator');
+  if(t) t.remove();
+}
+
+// ═══════════════════════════════════════════════════
+// REPORT GENERATOR
+// ═══════════════════════════════════════════════════
+function generateReport(type) {
+  const titles = {
+    board: 'Board Risk Committee Pack',
+    risk: 'Workforce Risk Report',
+    workforce: 'Workforce Intelligence Summary',
+    trend: 'Trend Analysis — 12 Month View'
+  };
+  const cont = document.getElementById('report-output');
+  cont.style.opacity = '0.4';
+  setTimeout(() => {
+    cont.style.opacity = '1';
+    cont.classList.add('animate-in');
+  }, 600);
+}
+
+// ═══════════════════════════════════════════════════
+// KEYBOARD NAVIGATION
+// ═══════════════════════════════════════════════════
+const pages = ['command','summary','radar','risk','capability','twin','simulator','hiring','copilot','reports','about','license','settings'];
+let currentPage = 0;
+
+document.addEventListener('keydown', (e) => {
+  if (e.target.tagName === 'INPUT') return;
+  if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+    currentPage = Math.min(currentPage+1, pages.length-1);
+  } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+    currentPage = Math.max(currentPage-1, 0);
+  }
+  if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+    const navItem = document.querySelector(`[data-page="${pages[currentPage]}"]`);
+    if (navItem) { navigate(pages[currentPage], navItem); }
+  }
+});
+
+// ═══════════════════════════════════════════════════
+// INIT SIM
+// ═══════════════════════════════════════════════════
+runSim();
+</script>
+</body>
+</html>
